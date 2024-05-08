@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CSS</title>
+</head>
+<style>
+
+li {
+color : navy;
+font-weight: bold;
+line-height: 200%
+
+}
+
+p {
+margin-top:0.5em;
+margin-bottom:0.5em;
+margin-left: 1em;
+}
+
+</style>
+<body>
+
+   <h1>CSS 기본속성</h1>
+	   <p>색, 배경, 텍스트, 글꼴, 링크, 리스트, 테이블에 대한 기본 속성을 살펴봅니다.</p><br>
+	
+   <h2>COLOR</h2>
+  	   <p>CSS에서 색을 표현하는 방법에는 다음과 같이 세 가지 방법이 있습니다. </p>
+  	   
+  	   	<ol>
+		<li>색상 이름으로 표현</li>
+			<p style=color:blue;> .blue { color:blue; } </p>
+			<img src="images/colorName.png">
+			<p>현재는 대부분의 브라우저가 140개의 색상 이름을 지원하고 있습니다.</p>
+		<li>RGB 색상값으로 표현</li>
+			<p> .blue { color:rgb(0,0,255); } </p>
+			<p>모니터나 스크린은 빨간색(Red), 녹색(Green), 파란색(Blue)을 혼합하여 색을 표현합니다.</p>
+			<p>	따라서 HTML에서도 이 세 가지 색을 가지고 색을 표현하는 RGB 색상을 사용합니다.</p>
+			<p>	RGB 색상의 기본색(Red, Green, Blue)은 각각 0부터 255까지의 범위를 가집니다.</p>
+				
+		<li>16진수 색상값으로 표현 </li>
+			<p style=color:#0000FF;> .blue { color:#0000FF; } </p>
+			<p style=color:#008000;> .green { color: #008000; } </p>
+			<p style=color:#C0C0C0;> .silver { color: #C0C0C0; } </p>
+			<p>16진수 색상값으로 표현</p>
+			<p>16진수 색상값은 RGB 색상값을 각각 16진수로 변환한 것입니다.</p>
+			<p>따라서 RGB 색상의 기본색(Red, Green, Blue)은 각각 00부터 FF까지의 범위를 가집니다.</p>
+  		</ol>
+	   
+	 
+   <h2>배경</h2>
+   <p>CSS에서 사용할 수 있는 background 속성은 다음과 같습니다.</p>
+	<ol>
+		<li>background-color</li>
+			<P>background-color 속성은 해당 HTML 요소의 배경색(background color)을 설정합니다.</P>
+			<P style=background-color:lightblue;>body { background-color: lightblue; }</P>
+		<li>background-image</li>
+			<p>매소드 { background-image: url(이미지파일의 위치); }</p>
+			<p style=color:grey;>body { background-image: url("/images/img_background.png"); }</p>
+		<li>background-repeat</li>
+			<p>배경 이미지를 수평이나 수직 방향으로만 반복되도록 설정할 수 있습니다.</p>
+			<p style=color:grey;>수평반복 body { background-image: url("/images/img_background.png"); background-repeat: repeat-x;}</p>
+			<p style=color:grey;>수직반복 body { background-image: url("/images/img_background.png"); background-repeat: repeat-y;}</p>
+			<p>배경 이미지가 반복되지 않고 한 번만 나타나게 할 수도 있습니다.	</p>
+	        <p style=color:grey;>반복없음 body { background-image: url("/images/img_background.png"); background-repeat: no-repeat;}</p>
+		<li>background-position</li>
+			<p>background-position 속성은 반복되지 않는 배경 이미지의 상대 위치(relative position)를 설정합니다.</p>
+			<p style=color:grey;>body {</p>
+			<p style=color:grey;>background-image: url("/images/img_background.png");</p>
+			<p style=color:grey;>background-repeat: no-repeat;}</p>
+			<p style=color:grey;>background-position: top right;</p>
+			<p style=color:grey;>}</p>
+			
+		<li>background-repeat</li>
+			<p>background-attachment 속성을 사용하여 위치가 설정된 배경 이미지를 해당 위치에 고정시킬 수도 있습니다.</p>
+			<p>이렇게 고정된 배경 이미지는 스크롤과는 무관하게 화면의 위치에서 이동하지 않습니다.</p>
+ 			<p style=color:grey;>body {</p>
+			<p style=color:grey;>background-image: url("/images/img_background.png");</p>
+			<p style=color:grey;>background-repeat: no-repeat;}</p>
+			<p style=color:grey;>background-position: top right;</p>
+			<p style=color:grey;>background-attachment: fixed;</p>
+			<p style=color:grey;>}</p>
+ 	</ol>
+	    
+	   <ul><li>background 속성 한 번에 적용하기</li></ul>
+	
+		<p style=color:grey;>body { background-image: url("/images/img_background.png") no-repeat top right fixed; }</p>
+	
+	<h2>text</h2>
+  	   <p>CSS에서 사용할 수 있는 대표적인 text 속성은 다음과 같습니다. </p>
+  	   
+  	   	<ol>
+			<li>color : 텍스트의 색상을 설정</li>
+			<li>direction : 텍스트가 써지는 방향을 설정</li>
+			<li>letter-spacing : 텍스트 내에서 글자 사이의 간격을 설정</li>
+			<li>word-spacing :텍스트 내에서 단어 사이의 간격을 설정 </li>
+			<li>text-indent : 단락의 첫 줄에 들여쓰기할지 안 할지를 설정</li>
+			<li>text-align :텍스트의 수평 방향 정렬을 설정</li>
+			<li>text-decoration :텍스트에 여러 가지 효과를 설정하거나 제거</li>
+				<p>tip! text-decoration 속성값을 none으로 설정하여 링크(link)가 설정된 텍스트의 밑줄을 제거하는데 자주 사용합니다.</p>
+			<li>text-transform : 텍스트에 포함된 영문자에 대한 대소문자를 설정</li>
+			<li>line-height : 텍스트의 줄 간격을 설정</li>
+			<li>text-shadow : 텍스트에 그림자 효과를 설정</li>
+		</ol>
+
+	<h2>font</h2>
+  	   <p>CSS에서 사용할 수 있는 font 속성은 다음과 같습니다. </p>
+  	   
+  	   	<ol>
+			<li>font-family</li>
+				<p>font-family 속성은 하나의 글꼴만을 설정할 수도 있고, 여러 개의 글꼴을 같이 설정할 수도 있습니다.</p>
+				<p>font-family 속성값이 여러 개의 글꼴로 설정되어 있으면, 웹 브라우저는 위에서부터 순서대로 글꼴을 읽어 들입니다.</p>
+			<li>font-style</li>
+				<p>font-style 속성은 주로 이탤릭체를 사용하기 위해 사용하며, 다음과 같이 3가지의 속성값을 가집니다.</p>
+				<p> .normal { font-style: normal; } 텍스트에 어떠한 스타일도 적용하지 않습니다.</p>
+				<p> .italic { font-style: italic; } 텍스트를 이탤릭체로 나타냅니다.</p>
+				<p> .oblique { font-style: oblique; } 텍스트를 기울입니다. 이 속성값은 italic과 매우 유사하지만 지원하는 웹 브라우저가 거의 없습니다.</p>
+				
+			<li>font-variant : 텍스트에 포함된 영문자 중 모든 소문자를 작은 대문자(small-caps) 글꼴로 변경</li>
+			<li>font-weight : 텍스트를 얼마나 두껍게 표현할지를 설정 </li>
+			<li>font-size : 텍스트의 크기를 설정</li>
+				<p>절대적 크기 : 픽셀(pixel)</p>
+				<p>상대적 크기 : 백분율 단위(%)는 기본 크기를 100%로 놓고, 그에 대한 상대적인 크기를 설정</p>
+				<p>상대적 크기 : 배수 단위(em)는 해당 글꼴(font)의 기본 크기를 1em으로 놓고, 그에 대한 상대적인 크기를 설정</p>
+		</ol>
+
+	<h2>link</h2>
+  	   <p>링크(link)에는 color, font-family, background 속성 등 CSS의 다양한 속성들을 적용할 수 있습니다.</p>
+  	   
+  	   	<ol>	
+  	  	 	<li> link : 링크의 기본 상태이며, 사용자가 아직 한 번도 해당 링크를 통해 연결된 페이지를 방문하지 않은 상태</li>
+  	  	 	<li> visited : 사용자가 한 번이라도 해당 링크를 통해 연결된 페이지를 방문한 상태</li>
+  	  	 	<li> hover : 사용자의 마우스 커서가 링크 위에 올라가 있는 상태</li>
+  	  	 	<li> active : 사용자가 마우스로 링크를 클릭하고 있는 상태</li>
+  	  	 	<li> focus : 키보드나 마우스의 이벤트(event) 또는 다른 형태로 해당 요소가 포커스(focus)를 가지고 있는 상태</li>
+		</ol>	
+		
+	<h2>list</h2>
+  	   <p>CSS에서 사용할 수 있는 list-style 속성은 다음과 같습니다.</p>
+  	   
+  	   	<ol>	
+  	  	 	<li>list-style-type : 리스트에 다양한 마커(marker)를 적용할 수 있습니다.</li>
+  	  	 		<p style=color:grey;> .square { list-style-type: square; }</p>
+  	  	 	<li>list-style-image : 마커(marker)로 자신만의 이미지를 사용할 수 있습니다.</li>
+  	  	 		<p style=color:grey;> .imageMarker { list-style-image: url("/images/img_list_marker.png"); }</p>
+  	  	 	<li>ist-style-position : 리스트 요소의 위치를 설정할 수 있습니다.</li>
+  	  	 		<p style=color:grey;> .inside { list-style-position: inside; }</p>  	
+  	  	 </ol>
+  	  <ul><li>list-style 속성 한 번에 적용하기</li></ul>
+  	  	<p style=color:grey;> ul { list-style: square inside url("images/img_list_marker.png"); }</p> 	 	
+ 
+ 	<h2>table css</h2>
+  	   <p>테이블에 다음 속성을 사용하여 CSS 스타일을 적용할 수 있습니다.</p>
+  	   	<ol>	
+  	  	 	<li>border : 테이블의 테두리(border)를 설정</li>   
+  	  	 	<li>border-collapse : 해당 테이블 의 테두리를 합침</li>   
+  	  	 	<li>border-spacing : 테이블 요소(th, td)간의 여백을 설정</li>   
+  	  	 	<li>caption-side : th, td 내부에서 텍스트의 수평 방향 정렬을 설정</li>   
+  	  	 	<li>empty-cells : th, td 내부에서 텍스트의 수직 방향 정렬을 설정</li>   
+  	  	 	<li>table-layout : 테이블에 사용되는 레이아웃 알고리즘을 설정</li>   
+  	        <img src="images/table.png">
+  	  	 </ol>
+  	      
+</body>
+
+</html>

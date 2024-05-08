@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>현재시간</h1>
+<p id="demo" ></p>
+
+<script>
+	const intId = setInterval(()=>{
+	let d = new Date();
+	
+	document.getElementById('demo').innerHTML = 
+	d.getHours() + " : " + d.getMinutes() + " :" +d.getSeconds();
+
+    setTimeout(()=>{clearInterval(intId)},10*1000);
+});
+	
+	
+
+	</script>
+
+</body>
+</html>

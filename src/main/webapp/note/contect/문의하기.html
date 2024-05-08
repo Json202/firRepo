@@ -1,0 +1,82 @@
+<!--******************************************************************************
+	메가코딩 contactUs페이지
+
+	update : 2024-01-27
+	
+	스타일 관리 관리자 : CJH
+	페이지 관리자 : KMJ
+	
+   메가 코딩 페이지 매뉴얼 :
+  - Collapse(콜랩스) JavaScript 플러그인과 조합하여, 수직으로 접는 아코디언 적용.
+  
+ ******************************************************************************-->
+ <!DOCTYPE html>
+ <html>
+ <head>
+    <meta charset="UTF-8">
+    <title>contectUs</title>
+    <!-- 모바일 크기 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../../bootstap/css/note.css">
+    <link rel="stylesheet" href="../../bootstap/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="../../bootstap/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../bootstap/css/contect.css">
+
+	<meta name="description" content="">
+	<meta name="author" content="">
+ </head>
+ <body>
+    
+<!--새로 0127 작성구간-->
+<section class=" contact section-padding" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-12 mx-auto">
+                <h2 class="mb-4 text-center" data-aos="fade-up">문의 내용을 입력해주세요.</h2>
+                <form action="https://formspree.io/f/xeqyepgg" method="post" class="contact-form" role="form" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-lg-6 col-6">
+                            <label for="text" class="form-label">이름<sup class="text-danger">*</sup></label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="성명" required>
+                        </div>
+                        <div class="col-lg-6 col-6">
+                            <label for="email" class="form-label">이메일<sup class="text-danger">*</sup></label>
+                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="이메일 주소" required>
+                        </div>
+                        <div class="col-12 my-4">
+                            <label for="message" class="form-label">어떻게 도와드릴까요?</label>
+                            <textarea name="message" rows="6" class="form-control" id="message" placeholder="프로젝트에 대해 알려주세요" required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <label for="services" class="form-label">서비스<sup class="text-danger">*</sup></label>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="form-check">
+                                <input type="checkbox" id="checkbox1" name="checkbox1" class="form-check-input">
+                                <label class="form-check-label" for="checkbox1">소스 문의</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12 my-2 my-lg-0">
+                            <div class="form-check">
+                                <input type="checkbox" id="checkbox2" name="checkbox2" class="form-check-input">
+                                <label class="form-check-label" for="checkbox2">실습 문의</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="form-check">
+                                <input type="checkbox" id="checkbox3" name="checkbox3" class="form-check-input">
+                                <label class="form-check-label" for="checkbox3">오류 문의</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-12 mx-auto mt-5">
+                        <button type="submit" class="form-control">문의하기</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!--새로 0127 작성구간 끝-->	
+</body>
+</html>

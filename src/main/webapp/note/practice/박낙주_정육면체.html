@@ -1,0 +1,56 @@
+<div class="wrap">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<style>
+
+    .wrap{
+        width: 200px; height: 200px;
+        position: relative;
+        left: 100px;
+        top: 200px
+    
+    }
+    .box{
+        width: 200px; height: 200px;
+        position:absolute;
+        left: 0; top: 0;
+    }
+
+    .box:nth-child(1){ background-color: red ;}
+    .box:nth-child(2){ background-color: greenyellow;}
+    .box:nth-child(3){ background-color: blue;}
+    .box:nth-child(4){ background-color: yellow;}
+    .box:nth-child(5){ background-color: brown;}
+    .box:nth-child(6){ background-color: pink;}
+</style>
+
+<style>
+    .wrap{
+        transform-style: preserve-3d;
+        animation-name: nak;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    .box{
+        opacity: 0.3;
+    }
+
+    @keyframes nak{
+        0% {transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+        100% {transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);}
+
+    }
+    .box:nth-child(1){ transform:                  translate3d(0px, 0px,100px); }
+    .box:nth-child(2){ transform: rotateY(90deg)   translate3d(0px, 0px,100px); }
+    .box:nth-child(3){ transform: rotateY(180deg) translate3d(0,0,100px); }
+    .box:nth-child(4){ transform: rotateY(270deg) translate3d(0,0,100px); }
+    .box:nth-child(5){ transform: rotateX(90deg) translate3d(0,0,100px); }
+    .box:nth-child(6){ transform: rotateX(270deg) translate3d(0,0,100px); }
+</style>

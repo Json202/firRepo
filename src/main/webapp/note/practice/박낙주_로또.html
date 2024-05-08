@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로또 프로그램</title>
+  <link rel="stylesheet" href="../../bootstap/css/bootstrap.min.css" >
+</head>
+<body>
+
+<script>
+  // 랜덤 숫자 생성 함수
+  const random_num = (min, max) => Math.floor(Math.random() * max) + min;
+
+  // 로또 번호 생성 함수
+  function LottoNum() {
+    const lottoNumbers = [];
+    while (lottoNumbers.length < 6) {
+      const newNumber = random_num(1, 45);
+      if (!lottoNumbers.includes(newNumber))lottoNumbers.push(newNumber);
+    }
+    return lottoNumbers;
+  }
+
+  // 당첨 여부 확인 함수
+  function checkLottoWin(userNum, winning) {
+    const Numbers = userNum.filter(num => winning.includes(num));
+    const Count = Numbers.length;
+
+    switch (Count) {
+      case 6:
+        return "1등 (모두 일치)";;
+      case 5:
+        return "2등 (5개 일치)";
+      case 4:
+        return "3등 (4개 일치)";
+      case 3:
+        return "4등 (3개 일치)";
+      case 2:
+        return "5등 (2개 일치)";
+      default:
+        return "꽝 다음기회에";;
+    }
+  }
+
+  // 계산 및 결과 출력 함수
+  function LottoCar() {
+    const num = LottoNum(); // 당첨 번호
+    
+    const s1 = document.getElementById("num_dt").value; // 시도 횟수
+
+    let winResult = "";
+	
+    for (let i = 0; i < s1; i++) {
+		let user = LottoNum(); // 사용자의 로또 번호
+      	winResult = checkLottoWin(user, num);
+          // 결과 출력
+	    document.getElementById('result').innerHTML += `로또 번호: ${user.join(', ')}<br>`;
+	    document.getElementById('result').innerHTML += `당첨 번호: ${num.join(', ')}<br>`;
+	    document.getElementById('result').innerHTML += `당첨 결과: ${winResult}<br>`;
+	      //if (winResult.includes("1등")) {
+	        //break; // 당첨되면 반복 중단
+	      //}
+    }
+
+  }
+</script>
+<h1>로또 당첨 확률 계산기x</h1>
+<input type="number" id="num_dt">시도 횟수<br>
+<button onclick="LottoCar()" class="btn btn-outline-dark" >실행</button>
+
+<p id="result"></p>
+
+</body>
+</html>

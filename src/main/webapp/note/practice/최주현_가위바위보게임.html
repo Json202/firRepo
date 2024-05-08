@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>가위바위보 게임</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<style>
+	
+    button {
+      font-size: 16px;
+      margin: 5px;
+      padding: 10px;
+    }
+
+    #other{
+		text-align: center;
+	}
+   
+   #game{
+	   display: inline-block;
+   }
+
+ </style>
+</head>
+<body>
+	
+	<div id="other">
+
+<div id="game">
+<h1 id="game">가위 바위 보 게임</h1>
+<div class="">
+<button type="button" onclick="choice('rock')" class="btn btn-outline-dark" id="but">가위</button>
+<button type="button" onclick="choice('paper')" class="btn btn-outline-dark" id="but">바위</button>
+<button type="button" onclick="choice('scissors')" class="btn btn-outline-dark" id="but">보</button>
+</div>
+<script>
+	
+	function choice(userSelector){
+		console.log("나 : " +  userSelector);
+	
+		
+	// 컴퓨터 무작위 선택
+
+    let cpChoice = rDom();
+    console.log("컴퓨터 :" + cpChoice);
+    
+    //결과
+    
+    let res = winner(userSelector, cpChoice);
+   console.log("결과 : " + res);
+	
+	
+	//결과 표시
+    alert("당신의 선택 :" + userSelector + "\n컴퓨터의 선택" + cpChoice + "\n결과 : " + res );
+    }	
+    	
+    	
+    function rDom(){
+		let choice = ["rock", "scissors", "paper"];
+		let random = Math.floor(Math.random() * choice.length)
+		return choice[random];
+	}	
+	
+	
+	function winner(user, computer){
+		if(user === computer){
+			return "무승부";
+		}else if(
+		(user === "rock" && computer === "scissors") ||
+	    (user === "paper" && computer === "rock") ||
+	    (user === "scissors" && computer === "paper")	
+	) {
+		return "이겼다";
+		} else {
+			return "패배";
+		}
+	}
+	
+	
+	
+</script>
+
+	</div>
+</div>
+
+
+</body>
+</html>

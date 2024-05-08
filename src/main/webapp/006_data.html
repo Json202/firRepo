@@ -1,0 +1,83 @@
+<!--******************************************************************************
+	메가코딩 data페이지
+
+	update : 2024-01-31
+	
+	스타일 관리 관리자 : CJH
+	페이지 관리자 : CJH
+	
+    메가 코딩 페이지 매뉴얼 :
+  - liveshop index페이지 iframe 부분 참고
+  - 화면 유동적인레이아웃 으로 만들기 네비게이션바나 iframe를 설정
+  - 자바스크립트 배열을 이용해서 자동으로 네비게이션바 추가하기
+ ******************************************************************************-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MegaCoding</title>
+    <!-- 모바일 크기 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstap/css/note.css">
+    <link rel="icon" href="favicons/favicon.ico">
+</head>
+<body>
+    <header id="main_header">
+        <h1><img src="./images/mc_logo_y.svg" width="30" height="30"><a href="index.html">MegaCoding</a></h1>
+    </header>
+    <nav id="main_gnb">
+    <ul class="left">
+        <li class="left2"><a href="001_html.html">HTML</a></li>
+        <li class="left2"><a href="002_css.html">CSS</a></li>
+        <li class="left2"><a href="003_javascript.html">JavaScript</a></li>
+        <li class="left2"><a href="004_practice.html">실습</a></li>
+        <li class="left2"><a href="005_contect.html">문의하기</a></li>
+        <li class="left2"><a href="006_data.html">자료실</a></li>
+    </ul>
+    <ul class="right">
+        <li class="right" id="right2"><a href="me.html">마이페이지</a></li>
+        <li class="right" id="right2"><a class="nav-link" id="log" href="login.html">logout</a></li>
+    </ul>
+</nav>
+<div id="wrap">
+    <nav id="main_lnb">
+        <ul id='main_lnb2'>
+        </ul>
+    </nav>
+        <div id="content_wrap">
+            <div id="content">
+                <article>
+                    <section id="main">
+						<article id="article">
+							<iframe 
+                            name="iframe1" 
+                            src="./note/data/참고사이트.html" 
+                            width=100% 
+                            height=1000 
+                            frameborder="0" 
+                            seamless
+                            >
+                        </iframe>
+						</article>
+					</section>
+                </article>
+            </div>
+        </div>
+    </div>
+    <script>
+        const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+        if(isLoggedIn=='true'){
+            document.getElementById('log').innerHTML="로그아웃";
+        }else{
+            document.getElementById('log').innerHTML="로그인";
+        }
+		const files=['참고사이트','참고영상','찾아오는길','참고파일다운'];
+		for(let i=0; i<files.length;i++){
+            document.getElementById('main_lnb2').innerHTML += '<li class="lnb2"><a href="note/data/'+files[i]+'.html" target="iframe1">'+files[i]+'</a></li>';
+		};
+	</script>
+    <footer id="main_footer">
+        Room 271106, Digital-ro 34-gil, Guro-gu, Seoul COPYRIGHT (C)2024 majustory . ALL RIGHTS RESERVED.메가코딩
+    </footer>
+</body>
+</html>

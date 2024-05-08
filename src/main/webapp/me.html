@@ -1,0 +1,126 @@
+<!--******************************************************************************
+	메가코딩 html페이지
+
+	update : 2024-01-31
+	
+	스타일 관리 관리자 : CJH
+	페이지 관리자 : CJH
+	
+   메가 코딩 페이지 매뉴얼 :
+  - liveshop index페이지 iframe 부분 참고
+  - 화면 유동적인레이아웃 으로 만들기 네비게이션바나 iframe를 설정
+  - 자바스크립트 배열을 이용해서 자동으로 네비게이션바 추가하기
+ ******************************************************************************-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MegaCoding</title>
+    <!-- 모바일 크기 -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="bootstap/css/note.css">
+    <link rel="icon" href="favicons/favicon.ico">
+    
+   <style>
+	   .bg-success {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+}
+
+    .tbcr{
+  background-color: gainsboro;
+}
+
+table{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+   </style>
+   
+
+</head>
+<body>
+    <header id="main_header">
+        <h1><img src="./images/mc_logo_y.svg" width="30" height="30"><a href="index.html">MegaCoding</a></h1>
+    </header>
+    <nav id="main_gnb">
+    <ul class="left">
+        <li class="left2"><a href="001_html.html">HTML</a></li>
+        <li class="left2"><a href="002_css.html">CSS</a></li>
+        <li class="left2"><a href="003_javascript.html">JavaScript</a></li>
+        <li class="left2"><a href="004_practice.html">실습</a></li>
+        <li class="left2"><a href="005_contect.html">문의하기</a></li>
+        <li class="left2"><a href="006_data.html">자료실</a></li>
+    </ul>
+    <ul class="right">
+        <li class="right" id="right2"><a href="#">마이페이지</a></li>
+        <li class="right" id="right2"><a class="nav-link" id="log" href="login.html">logout</a></li>
+    </ul>
+</nav>
+<div id="wrap" class="bg-success p-2 text-dark bg-opacity-25">
+        <div id="content_wrap">
+                <article>
+                    <section id="main">
+                        <article id="article">
+                        <table style="height: 621px; width: 101.171%; margin: 0px auto;" border=1 class="table table-striped-columns">
+                            <tbody>
+                            <tr style="height: 44px;">
+                            <td style="width: 12.5794%; height: 116.656px; background-color: #AAA9AE;" id="im" rowspan="3"></td>
+                            <td style="width: 29.4206%; height: 44px; text-align: center;" class="tbcr"><strong>성 명</strong></td>
+                            <td style="width: 53%; height: 44px; text-align: center;" id="nm" colspan="2">&nbsp;</td>
+                            </tr>
+                            <tr style="height: 35.6562px;">
+                            <td style="width: 29.4206%; height: 35.6562px; text-align: center;" class="tbcr"><strong>생년월일</strong></td>
+                            <td style="width: 53%; height: 35.6562px; text-align: center;" colspan="2" id="bi">&nbsp;</td>
+                            </tr>
+                            <tr style="height: 37px;">
+                            <td style="width: 29.4206%; height: 37px; text-align: center;" class="tbcr"><strong>이메일</strong></td>
+                            <td style="width: 53%; height: 37px; text-align: center;" id="em" colspan="2">&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                            <td style="width: 12.5794%; height: 50px; text-align: center;" class="tbcr"><strong data-v-75bb0ddb="">국적</strong></td>
+                            <td style="width: 29.4206%; height: 50px; text-align: center;" id="nt"></td>
+                            <td style="width: 24%; height: 50px; text-align: center;" class="tbcr"><strong data-v-75bb0ddb="">데뷔</strong></td>
+                            <td style="width: 29%; height: 50px; text-align: center; " id="dt"></td>
+                            </tr>
+                            <tr style="height: 49px;">
+                            <td style="width: 12.5794%; height: 49px; text-align: center;" class="tbcr"><strong data-v-75bb0ddb="">가족</strong></td>
+                            <td style="width: 82.4206%; height: 49px; text-align: center;" colspan="3" id="fa"></td>
+                            </tr>
+                            <tr style="height: 54px;">
+                            <td style="width: 12.5794%; height: 54px; text-align: center;" class="tbcr"><strong data-v-75bb0ddb="">소속사</strong></td>
+                            <td style="width: 82.4206%; height: 54px; text-align: center;" colspan="3" id="af"></td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </article>
+                    </section>
+                </article>
+        </div>
+    </div>
+    <script>
+        const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+        if(isLoggedIn=='true'){
+            document.getElementById('log').innerHTML="로그아웃";
+            var storedUser = JSON.parse(sessionStorage.getItem("user")); 
+            document.getElementById('nm').innerHTML=storedUser.username; 
+            document.getElementById('em').innerHTML=storedUser.email; 
+            document.getElementById('nt').innerHTML=storedUser.nationality; 
+            document.getElementById('bi').innerHTML=storedUser.birthday; 
+            document.getElementById('dt').innerHTML=storedUser.Debut;
+            document.getElementById('fa').innerHTML=storedUser.family; 
+            document.getElementById('af').innerHTML=storedUser.affiliation;
+            document.getElementById('im').innerHTML='<img src="./images/'+storedUser.jpg+'.jpg" alt="hge" width="100%" height="auto">;'
+        }else{
+            document.getElementById('log').innerHTML="로그인";
+            window.history.back();
+            alert("로그인을 해주세요");
+        }
+    </script>
+    <footer id="main_footer">
+        Room 271106, Digital-ro 34-gil, Guro-gu, Seoul COPYRIGHT (C)2024 majustory . ALL RIGHTS RESERVED.메가코딩
+    </footer>
+</body>
+</html>

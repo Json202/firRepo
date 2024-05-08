@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CSS</title>
+</head>
+<style>
+
+li {
+color : navy;
+font-weight: bold;
+line-height: 200%
+
+}
+
+p {
+margin-top:0.5em;
+margin-bottom:0.5em;
+margin-left: 1em;
+}
+
+</style>
+<body>
+
+   <h1>위치 속성</h1><br>
+     <h2>display 속성의 기본 설정값의 변경</h2>
+		<p>HTML의 모든 요소는 각각의&nbsp;기본 display 속성값을 가지고 있습니다.</p>
+		<p>&nbsp;</p>
+		<p>하지만 display 속성값이 블록인&nbsp;요소의 속성값을&nbsp;인라인으로&nbsp;바꿀 수&nbsp;있습니다.</p>
+		<p>또한, 반대로 display 속성값이 인라인인&nbsp;요소의 속성값을&nbsp;블록으로 바꿀 수도 있습니다.</p>
+		<p>&nbsp;</p>
+		<p>이렇게 HTML 요소의 display 속성값을 변경함으로써 웹 페이지를 개발자가 원하는 모양으로 변경할 수 있습니다.</p>
+		<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; li&nbsp;{&nbsp;display:&nbsp;inline; }</p>
+			<p class="textarea">&lt;/style&gt;</p>
+		</div>
+		<p>&nbsp;</p>
+		<p>위의 예제에서 블록&nbsp;요소인 &lt;li&gt;요소의 display 속성값을&nbsp;인라인으로 변경하고 있습니다.</p>
+		<p>display 속성값이 인라인으로 변경된 &lt;li&gt;요소는 해당 라인의 모든 너비를 차지하는 블록 요소의 특징을 잃어버리게 됩니다.</p>
+		<div class="google-auto-placed ap_container">
+		<div id="aswift_1_host" tabindex="0" title="Advertisement" aria-label="Advertisement">display 속성값을 변경해도, 실제로 해당 요소가 완전히 다른 타입의 요소로 바뀌는 것은 아닙니다.</div>
+		<ins class="adsbygoogle adsbygoogle-noablate" data-ad-format="auto" data-ad-client="ca-pub-1448797817368261" data-adsbygoogle-status="done" data-ad-status="filled">
+		<div id="aswift_1_host" tabindex="0" title="Advertisement" aria-label="Advertisement">&nbsp;</div>
+		</ins></div>
+		<div class="google-auto-placed ap_container">&nbsp;</div>
+		<p>즉, display 속성값을 인라인에서 블록으로 변경했더라도,&nbsp;변경된&nbsp;요소는&nbsp;내부에 다른&nbsp;요소를 포함할&nbsp;수&nbsp;없습니다.</p>
+		<p>왜냐하면, 처음부터&nbsp;display 속성값이 블록인 요소만이 내부에 다른 요소를 포함할 수 있기 때문입니다.</p>
+		<p>&nbsp;</p>
+	
+	<h2>strong>인라인-블록(inline-block)</h2>
+		<p>인라인과 블록 이외에도 display 속성에 자주 사용되는 속성값에는 인라인-블록(inline-block)이 있습니다.</p>
+		<p>display 속성값이 인라인-블록으로 설정된 요소는 해당 요소 자체는 인라인(inline) 요소처럼 동작합니다.</p>
+		<p>하지만 해당 요소 내부에서는 블록(block) 요소처럼 동작합니다.</p>
+		<p>&nbsp;</p>
+		<p>이처럼 인라인-블록 요소는 인라인 요소와 비슷하지만, 너비와 높이를 설정할 수 있습니다.</p>
+		<p>또한, 블록 요소처럼 margin을 이용하여 여백을 지정할 수도 있게 됩니다.</p>
+		<p>&nbsp;</p>
+		<p>다음 예제는 다양한 display 속성값의 동작을 보여주는 예제입니다.</p>
+		<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; div&nbsp;{&nbsp;width:&nbsp;100px;&nbsp;height:&nbsp;50px; }</p>
+			<p class="textarea">&nbsp;</p>
+			<p class="textarea">&nbsp; &nbsp; .first&nbsp;{&nbsp;background-color:&nbsp;aqua; }</p>
+			<p class="textarea">&nbsp; &nbsp; .second&nbsp;{&nbsp;background-color:&nbsp;green; }</p>
+			<p class="textarea">&nbsp; &nbsp; .third&nbsp;{&nbsp;background-color:&nbsp;yellow; }</p>
+			<p class="textarea">&nbsp;</p>
+			<p class="textarea">&nbsp; &nbsp; .inline&nbsp;{&nbsp;display:&nbsp;inline; }</p>
+			<p class="textarea">&nbsp; &nbsp; .inline-block&nbsp;{&nbsp;display:&nbsp;inline-block; }</p>
+			<p class="textarea">&lt;/style&gt;</p>
+			<p>위의 예제처럼 display 속성값이 인라인-블록으로 설정된 요소들은 인라인 요소처럼 한 줄로 늘어서게 됩니다.</p>
+		</div>
+		<p>하지만 블록 요소처럼 너비와 높이를 설정할 수 있게 됩니다.</p>
+		<p>따라서 웹 사이트의 메뉴나 내비게이션 바를 만들 때 자주 사용됩니다.</p>
+	
+	<h2>visibility 속성</h2>
+		<p>visibility 속성은 HTML 요소가 웹 페이지에 표현될지 아닐지만을 결정합니다.</p>
+		<p>따라서&nbsp;웹 페이지에는 나타나지&nbsp;않더라도 레이아웃 내에는 여전히 존재하게 되며, 코드 내에도&nbsp;당연히 존재하게 됩니다.</p>
+		<p>visibility 속성을 자바스크립트와 함께 사용하면 매우 복잡한 메뉴나 레이아웃을 손쉽게 만들 수 있습니다.</p>
+		<p>&nbsp;</p>
+		<p>visibility 속성에 사용할 수 있는 속성값은 다음과 같습니다.</p>
+		<p>&nbsp;</p>
+		<p>1. visible : 해당 HTML 요소를 웹 페이지에 나타냅니다.</p>
+		<p>2. hidden : HTML 요소를 웹 페이지에 나타내지 않습니다. 하지만 여전히 웹 페이지의 레이아웃에는 존재합니다.</p>
+		<p>3. collapse : 이 속성값은 동적인 테이블에서만 사용할 수 있으며, 테이블의 테두리를 한 줄만 보여줍니다.</p>
+		<p>&nbsp;</p>
+		
+	<h2>HTML 요소 숨기기</h2>
+		<p>HTML 요소를 숨기기 위해서는 display 속성값을 none으로 설정하면 됩니다.</p>
+		<p>이렇게 하면 해당&nbsp;요소는 웹 페이지에&nbsp;더 이상 나타나지&nbsp;않으며, 웹 페이지의 레이아웃에도 영향을 미치지&nbsp;않습니다.</p>
+		<p>&nbsp;</p>
+		<p>또한, visibility 속성값을 hidden으로 설정해도 HTML 요소를 숨길 수&nbsp;있습니다.&nbsp;</p>
+		<div class="google-auto-placed ap_container"><ins class="adsbygoogle adsbygoogle-noablate" data-ad-format="auto" data-ad-client="ca-pub-1448797817368261" data-adsbygoogle-status="done" data-ad-status="filled">
+		<div id="aswift_3_host" tabindex="0" title="Advertisement" aria-label="Advertisement">하지만 display 속성값을 none으로 설정한 것과는 달리, 눈에 보이지만 않을 뿐 여전히 웹 페이지의 레이아웃에는 존재하게 됩니다.</div>
+		</ins></div>
+		<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; p.none&nbsp;{&nbsp;display:&nbsp;none; }</p>
+			<p class="textarea">&nbsp; &nbsp; p.hidden&nbsp;{&nbsp;visibility:&nbsp;hidden; }</p>
+			<p class="textarea">&lt;/style&gt;</p>
+			<p>&nbsp;</p>
+		</div>
+		
+	<h2>opacity 속성</h2>
+		<p>opacity 속성을&nbsp;이용하면 HTML 요소의&nbsp;투명도를 간단히&nbsp;조절할 수 있습니다.</p>
+		<p>opacity 속성값은 0.0부터 1.0까지 설정할 수 있으며, 속성값이 0에 가까울수록 투명한 상태가 됩니다.</p>
+		<p>&nbsp;</p>
+		<p>익스플로러 8과 그 이전 버전에서는&nbsp;투명도를 표현하기&nbsp;위해&nbsp;다음과 같은 문법을 사용합니다.</p>
+		<div class="syntax">
+		<h5>문법</h5>
+			<p class="textarea">filter:alpha(opacity=x)</p>
+			</div>
+			<p>&nbsp;</p>
+			<p>여기서 x값은 0부터 100까지 설정할 수 있으며, x값이 0에 가까울수록 투명한 상태가 됩니다.</p>
+			<p>&nbsp;</p>
+			<p>다음 예제는 대부분의 웹 브라우저뿐만 아니라 익스플로러 8과 그 이전 버전에서도 투명도를 정확하게 표현하는 예제입니다.</p>
+			<div class="codding-test">
+		<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; img&nbsp;{&nbsp;opacity:&nbsp;0.4;&nbsp;filter:&nbsp;alpha(opacity=40);&nbsp;}</p>
+			<p class="textarea">&nbsp; &nbsp; img:hover&nbsp;{&nbsp;opacity:&nbsp;1.0;&nbsp;filter:&nbsp;alpha(opacity=100);&nbsp;}</p>
+			<p class="textarea">&lt;/style&gt;</p>
+		</div>
+      
+	<h2>position 속성</h2>
+		<p>position 속성은 HTML 요소가&nbsp;위치를 결정하는 방식을 설정합니다.</p>
+		<p>CSS에서 요소의 위치를 결정하는 방식에는 다음과 같이 4가지 방식이 있습니다.</p>
+		<p>&nbsp;</p>
+		<p>1. 정적 위치(static position) 지정 방식</p>
+		<p>2. 상대&nbsp;위치(relative position) 지정 방식</p>
+		<p>3. 고정 위치(fixed position) 지정 방식</p>
+		<p>4. 절대&nbsp;위치(absolute position) 지정 방식</p>
+		<h4>&nbsp;</h4>
+		
+		<h2>정적 위치(static position) 지정 방식</h2>
+		<p>HTML 요소의 위치를 결정하는 가장 기본적인 방식은 정적 위치(static position) 지정 방식입니다.</p>
+		<p>&nbsp;</p>
+		<p>position 속성값이 static으로 설정된 요소는 top, right, bottom, left 속성값에 영향을 받지 않습니다.</p>
+		<p>정적 위치(static position) 지정 방식은&nbsp;단순히&nbsp;웹 페이지의 흐름에 따라 차례대로 요소들을 위치시키는 방식입니다.</p>
+		<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; div&nbsp;{&nbsp;position:&nbsp;static;&nbsp;}</p>
+			<p class="textarea">&lt;/style&gt;</p>
+			<p>모든 HTML 요소의 position 속성의 기본 설정값은&nbsp;static입니다.</p>
+			<p>&nbsp;</p>
+			</div>
+			
+	<h2>상대&nbsp;위치(relative position) 지정 방식</h2>
+		<p>상대&nbsp;위치(relative position) 지정 방식은 해당 HTML 요소의 기본 위치를 기준으로&nbsp;위치를 설정하는 방식입니다.</p>
+		<p>&nbsp;</p>
+		<p>HTML 요소의 기본 위치란 해당&nbsp;요소가 정적 위치(static position) 지정 방식일 때&nbsp;결정되는 위치를 의미합니다.</p>
+		<div class="codding-test">
+		<h5>예제</h5>
+		<p class="textarea">&lt;style&gt;</p>
+		<p class="textarea">&nbsp; &nbsp; div.relative&nbsp;{&nbsp;position:&nbsp;relative;&nbsp;left:&nbsp;30px;&nbsp;}</p>
+		<p class="textarea">&lt;/style&gt;</p>
+		<p class="textarea">&nbsp;</p>
+		</div>
+		
+	<h2>고정 위치(fixed position) 지정 방식</h2>
+		<p>고정 위치(fixed position) 지정 방식은 뷰포트(viewport)를 기준으로 위치를 설정하는 방식입니다.&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>즉, 웹 페이지가 스크롤 되어도&nbsp;고정 위치로 지정된&nbsp;요소는 항상 같은 곳에 위치하게 됩니다.</p>
+			<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; div.fixed&nbsp;{&nbsp;position:&nbsp;fixed;&nbsp;top:&nbsp;0;&nbsp;right:&nbsp;0;&nbsp;}</p>
+			<p class="textarea">&lt;/style&gt;</p>
+			<p>&nbsp;</p>
+			</div>
+			<h4>&nbsp;</h4>
+		
+	<h2>절대&nbsp;위치(absolute position) 지정 방식</h2>
+		<p>절대&nbsp;위치(absolute position) 지정 방식은 고정 위치가&nbsp;뷰포트를 기준으로&nbsp;위치를 결정하는 것과&nbsp;비슷하게 동작합니다.</p>
+		<p>단지 뷰포트(viewport)를 기준으로 하는&nbsp;것이&nbsp;아닌 위치가 설정된 조상(ancestor) 요소를 기준으로&nbsp;위치를 설정하게 됩니다.</p>
+			<div class="google-auto-placed ap_container">
+			<div id="aswift_1_host" tabindex="0" title="Advertisement" aria-label="Advertisement">하지만 위치가 설정된 조상(ancestor) 요소를 가지지 않는다면, HTML 문서의 body 요소를 기준으로&nbsp;위치를 설정하게 됩니다.</div>
+			<ins class="adsbygoogle adsbygoogle-noablate" data-ad-format="auto" data-ad-client="ca-pub-1448797817368261" data-adsbygoogle-status="done" data-ad-status="filled">
+			<div id="aswift_1_host" tabindex="0" title="Advertisement" aria-label="Advertisement">&nbsp;</div>
+			</ins></div>
+			<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; div.absolute&nbsp;{&nbsp;position:&nbsp;absolute;&nbsp;top:&nbsp;50px;&nbsp;right:&nbsp;0;&nbsp;}</p>
+			<p class="textarea">&lt;/style&gt;</p>
+			<p>위치가 설정된 요소라는 것은 정적 위치(static position) 지정 방식을 제외한 다른 방식(relative, fixed, absolute)으로 위치가 설정된&nbsp;요소를 의미합니다.</p>
+			<p>&nbsp;</p>
+			</div>
+		
+	<h2>정적 위치(static position) 지정 방식과 다른 방식들과의 차이점</h2>
+		<p>정적 위치(static position) 지정 방식을 제외한 나머지 다른 방식(relative, fixed, absolute)들은 전부 어떤&nbsp;기준에 대해 해당 요소의&nbsp;상대적인&nbsp;위치를 설정하는 방식입니다.</p>
+		<p>&nbsp;</p>
+		<p>- 상대 위치(relative position) : 해당 요소가 정적&nbsp;위치 지정 방식일 때의&nbsp;위치에 상대적으로 위치함.</p>
+			<div class="google-auto-placed ap_container">
+			<div id="aswift_2_host" tabindex="0" title="Advertisement" aria-label="Advertisement">- 고정 위치(fixed position) : 뷰포트(viewport)에 상대적으로 위치함.</div>
+			<div tabindex="0" title="Advertisement" aria-label="Advertisement">&nbsp;</div>
+			<div id="aswift_2_host" tabindex="0" title="Advertisement" aria-label="Advertisement">- 절대 위치(absolute position) : 위치가 설정된 바로 상위의 조상(ancestor) 요소에 상대적으로 위치함.</div>
+			<ins class="adsbygoogle adsbygoogle-noablate" data-ad-format="auto" data-ad-client="ca-pub-1448797817368261" data-adsbygoogle-status="done" data-ad-status="filled">
+			<div id="aswift_2_host" tabindex="0" title="Advertisement" aria-label="Advertisement">&nbsp;</div>
+			</ins></div>
+			<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; .static&nbsp;{&nbsp;position:&nbsp;static;&nbsp;}</p>
+			<p class="textarea">&nbsp; &nbsp; .relative&nbsp;{&nbsp;position:&nbsp;relative;&nbsp;}</p>
+			<p class="textarea">&nbsp; &nbsp; .fixed&nbsp;{&nbsp;position:&nbsp;fixed;&nbsp;}</p>
+			<p class="textarea">&nbsp; &nbsp; .absolute&nbsp;{&nbsp;position:&nbsp;absolute;&nbsp;}</p>
+			<p class="textarea">&lt;/style&gt;</p>
+			<p class="textarea">&nbsp;</p>
+			</div>
+		
+	<h2>z-index 속성</h2>
+		<p>HTML 요소의 위치를 설정하게 되면 어떤 요소들은 설정된 위치 및 방식에 따라 서로 겹칠 수도 있습니다.</p>
+		<p>z-index 속성은 이렇게 겹쳐지는&nbsp;요소들이 쌓이는 스택(stack)의 순서를 설정합니다.</p>
+			<div>
+			<div id="aswift_4_host" tabindex="0" title="Advertisement" aria-label="Advertisement">스택(stack)의 순서는 양수나 음수 모두 설정할 수 있으며, 크기가 클수록 앞쪽에 위치하고 작을수록 뒤쪽에 위치하게 됩니다.</div>
+			</div>
+			<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; .last&nbsp;{</p>
+			<p class="textarea">&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;position:&nbsp;fixed;</p>
+			<p class="textarea">&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;top:&nbsp;180px;&nbsp;</p>
+			<p class="textarea">&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;left:&nbsp;120px;&nbsp;</p>
+			<p class="textarea">&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;z-index:&nbsp;-1;&nbsp;</p>
+			<p class="textarea">&nbsp; &nbsp;&nbsp;}</p>
+			<p class="textarea">&lt;/style&gt;</p>
+			</div>
+			
+	<h2>float 속성</h2>
+		<p>float 속성은 해당 HTML 요소가 주변의 다른 요소들과 자연스럽게&nbsp;어울리도록 만들어 줍니다.</p>
+		<p>이 속성은 본래 위와 같은&nbsp;목적으로&nbsp;만들어졌지만, 현재는 웹 페이지의 레이아웃(layout)을 작성할&nbsp;때 자주 사용됩니다.</p>
+		<p>&nbsp;</p>
+		<p>다음 예제는&nbsp;이미지와 글자를 함께 출력하는 예제입니다.</p>
+			<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; img&nbsp;{&nbsp;float:&nbsp;left;&nbsp;margin-right:&nbsp;20px;&nbsp;}</p>
+			<p class="textarea">&lt;/style&gt;</p>
+			<p>&nbsp;</p>
+			</div>
+			
+	<h2>clear 속성</h2>
+		<p>clear 속성은 float 속성이 적용된 이후 나타나는 요소들의 동작을 조절해 줍니다.</p>
+		<p>컨테이너 요소에 float 속성이 적용되면 그 이후에 등장하는 모든 요소들은 정확한 위치를 설정하기가 매우 힘들어집니다.</p>
+		<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; .left&nbsp;{&nbsp;background-color:&nbsp;#FF8C00;&nbsp;width:&nbsp;150px;&nbsp;height:&nbsp;50px;&nbsp;float:&nbsp;left;&nbsp;}</p>
+			<p class="textarea">&nbsp; &nbsp; .right&nbsp;{&nbsp;background-color:&nbsp;#9932CC;&nbsp;width:&nbsp;150px;&nbsp;height:&nbsp;50px;&nbsp;float:&nbsp;right;&nbsp;}</p>
+			<p class="textarea">&lt;/style&gt;</p>
+			</div>
+			<p>&nbsp;</p>
+			<p>따라서 float 속성을 적용하고자 하는 요소가 모두 등장한&nbsp;이후에는&nbsp;clear 속성을 사용하여, 이후에 등장하는 요소들이&nbsp;더는&nbsp;flaot 속성에 영향을 받지 않도록 설정해줘야 합니다.</p>
+			<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; .left&nbsp;{&nbsp;background-color:&nbsp;#FF8C00;&nbsp;width:&nbsp;150px;&nbsp;height:&nbsp;50px;&nbsp;float:&nbsp;left;&nbsp;}</p>
+			<p class="textarea">&nbsp; &nbsp; .right&nbsp;{&nbsp;background-color:&nbsp;#9932CC;&nbsp;width:&nbsp;150px;&nbsp;height:&nbsp;50px;&nbsp;float:&nbsp;right;&nbsp;}</p>
+			<p class="textarea">&nbsp; &nbsp; p&nbsp;{&nbsp;clear:&nbsp;both; }</p>
+			<p class="textarea">&lt;/style&gt;</p>
+			<p class="textarea">&nbsp;</p>
+			<p>&nbsp;</p>
+			</div>
+			
+	<h2>overflow 속성</h2>
+		<p>float 속성이 적용된 HTML 요소가 자신을 감싸고 있는 컨테이너 요소보다 크면, 해당&nbsp;요소의 일부가 밖으로 흘러넘치게 됩니다.</p>
+		<p>이때 overflow 속성값을 auto로 설정하면, 컨테이너 요소의 크기가 자동으로 내부의 요소를 감쌀 수 있을 만큼 커지게 됩니다.</p>
+		<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; div&nbsp;{&nbsp;border:&nbsp;3px&nbsp;solid&nbsp;#73AD21;&nbsp;padding:&nbsp;5px;}</p>
+			<p class="textarea">&nbsp; &nbsp; img&nbsp;{&nbsp;float:&nbsp;left; }</p>
+			<p class="textarea">&nbsp; &nbsp; .good&nbsp;{&nbsp;overflow:&nbsp;auto; }</p>
+			<p class="textarea">&lt;/style&gt;</p>
+			<p class="textarea">&nbsp;</p>
+			</div>
+			
+	<h2>float 속성을 이용한 레이아웃</h2>
+		<p>현재 웹 페이지의 레이아웃은 대부분 float 속성을 이용하여 작성되고 있습니다.</p>
+		<p>&nbsp;</p>
+		<p>다음 예제는 float 속성을 이용해 작성된&nbsp;레이아웃을 보여줍니다.</p>
+		<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; div.page&nbsp;{&nbsp;border:&nbsp;3px&nbsp;solid&nbsp;#CD5C5C;&nbsp;overflow:&nbsp;auto;&nbsp;}</p>
+			<p class="textarea">&nbsp; &nbsp; h2&nbsp;{&nbsp;text-align:&nbsp;center; }</p>
+			<p class="textarea">&nbsp; &nbsp; header{&nbsp;border:&nbsp;3px&nbsp;solid&nbsp;#FFD700; }</p>
+			<p class="textarea">&nbsp; &nbsp; nav&nbsp;{&nbsp;border:&nbsp;3px&nbsp;​​​​​​​solid&nbsp;#FF1493;&nbsp;width:&nbsp;150px;&nbsp;float:&nbsp;left;&nbsp;}</p>
+			<p class="textarea">&nbsp; &nbsp; section&nbsp;{&nbsp;border:&nbsp;3px&nbsp;​​​​​​​solid&nbsp;#00BFFF;&nbsp;margin-left:&nbsp;156px;&nbsp;}</p>
+			<p class="textarea">&nbsp; &nbsp; footer{&nbsp;border:&nbsp;3px&nbsp;​​​​​​​solid&nbsp;#00FA9A; }</p>
+			<p class="textarea">&lt;/style&gt;</p>
+			<p>&nbsp;</p>
+		</div>
+		
+	<h2>정렬(align)</h2>
+		<p>블록(block) 타입의&nbsp;요소를 정렬하기 위해서는&nbsp;다음과 같은&nbsp;방법을 사용할 수 있습니다.</p>
+		<p>&nbsp;</p>
+		<p>1. margin 속성을 이용한 가운데 정렬</p>
+		<p>2. position 속성을 이용한 좌우 정렬</p>
+		<p>3. float 속성을 이용한 좌우 정렬</p>
+		<h4>&nbsp;</h4>
+		
+	<h2>margin 속성을 이용한 가운데 정렬</h2>
+		<p>margin 속성값을 auto로 설정하면, 해당&nbsp;요소를 감싸고 있는 컨테이너 요소를 기준으로&nbsp;수평 방향&nbsp;가운데 정렬이 됩니다.</p>
+		<p>&nbsp;</p>
+		<p>이때 해당 요소는 특정한 너비를&nbsp;가져야 하며, 너비를 제외한 나머지 공간은 좌우로 균등하게 나뉘어 여백으로&nbsp;만들어집니다.</p>
+		<p>따라서 이 방법을 사용하기 위해서는 반드시 해당 요소의 width&nbsp;속성값을 먼저 설정해야만 합니다.</p>
+			<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; div&nbsp;{&nbsp;width:&nbsp;300px;&nbsp;margin:&nbsp;auto;&nbsp;}</p>
+			<p class="textarea">&lt;/style&gt;&nbsp;</p>
+			</div>
+			<div class="content-box s5">익스플로러 8과 그 이전 버전에서는 HTML 문서에 &lt;!DOCTYPE html&gt;태그가&nbsp;삽입되어 있어야 margin&nbsp;속성이 제대로 표현됩니다.</div>
+			<div class="content-box s5">&nbsp;</div>
+	<h2>position 속성을 이용한 좌우 정렬</h2>
+		<p>절대 위치 지정 방식으로 위치한 요소는 정상적인 레이아웃에서 벗어나&nbsp;다른 요소와 겹칠 수 있게 됩니다.</p>
+		<p>따라서 이 특성을 이용하면 HTML 요소를 수평 방향으로 좌우 정렬할 수 있습니다.</p>
+		<p>&nbsp;</p>
+		<p>position 속성을 이용하여 정렬할 경우에는&nbsp;&lt;body&gt;요소에 margin과 padding 속성값을 설정하는 것이 좋습니다.</p>
+		<p>이렇게 함으로써&nbsp;웹 브라우저마다 레이아웃이 다르게 보이는 것을 미리 방지할 수 있습니다.</p>
+			<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; div&nbsp;{&nbsp;width:&nbsp;300px;&nbsp;padding:&nbsp;10px;&nbsp;margin:&nbsp;0;&nbsp;position:&nbsp;absolute;&nbsp;right:&nbsp;0; }</p>
+			<p class="textarea">&lt;/style&gt;</p>
+			<p>익스플로러 8과 그 이전 버전에서는 HTML 문서에 &lt;!DOCTYPE html&gt;태그가&nbsp;삽입되어 있어야 position&nbsp;속성이 제대로 표현됩니다.</p>
+			<p>&nbsp;</p>
+			</div>
+			
+	<h2>float 속성을 이용한 좌우 정렬</h2>
+		<p>float 속성을 이용하면 수평 방향으로 좌우&nbsp;정렬할 수 있습니다.</p>
+		<p>float 속성을 이용하여 정렬할 경우에는 &lt;body&gt;요소에 margin과 padding 속성값을 설정하는 것이 좋습니다.</p>
+		<p>이렇게 함으로써&nbsp;웹 브라우저마다 레이아웃이 다르게 보이는 것을 미리 방지할 수 있습니다.</p>
+			<div class="codding-test">
+			<h5>예제</h5>
+			<p class="textarea">&lt;style&gt;</p>
+			<p class="textarea">&nbsp; &nbsp; div&nbsp;{&nbsp;width:&nbsp;350px;&nbsp;padding:&nbsp;10px;&nbsp;margin:&nbsp;0; }</p>
+			<p class="textarea">&nbsp; &nbsp; div.left&nbsp;{&nbsp;float:&nbsp;left&nbsp;}</p>
+			<p class="textarea">&nbsp; &nbsp; div.right&nbsp;{&nbsp;float:&nbsp;right&nbsp;}</p>
+			<p class="textarea">&lt;/style&gt;</p>
+			</div>		
+</body>
+
+</html>

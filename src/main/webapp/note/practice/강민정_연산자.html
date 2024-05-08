@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../bootstap/css/bootstrap.min.css" >
+  <title>Number Guessing Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #output {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    #guessInput {
+      width: 50px;
+      text-align: center;
+    }
+    #submitGuess {
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>연산자</h1>
+  <p>a,b에 대해서 변수 a와 b의 계산 결과를 표시합니다.</p>
+  <form>
+	<input type="text" id="fNum1">
+	<input type="text" id="op" placeholder="+ - * / % 만 입력..">
+  	<input type="text" id="sNum2">
+  	=
+    <input type="text" id="result" value="">
+    <input type="button" value="계산하기" onclick="myfunc();">
+    <input type="reset">
+	</form>
+
+	<script>
+	   
+	/*
+	 오칙연산자 인지를 확인 하는 함수 정의
+	*/
+	
+	function isEmpty(op){
+	   if(op === undefined || op === ''){
+	      return true;//공백이면 함수는 여기서 종료됨...
+	   }
+	   return false;
+	}
+	function checkOp(op){
+	   let isEmp = isEmpty(op);
+	   if(isEmp){//연산자를 입력하지 않았음..
+	      return true;
+	   }
+	}
+	function myfunc(){
+	   
+	   let firEle =  document.getElementById('fNum1');
+	   let secEle = document.getElementById('sNum2');
+	   let opEle = document.getElementById('op');
+	   //입력 태그의 값 얻어내기.
+	   let fir = Number(firEle.value);
+	   let sec = Number(secEle.value);
+	   let op = opEle.value; //입력 연산자 값..
+	   
+	   //op 검증 함수 호출함..
+	   let res = checkOp(op);
+	   
+	   if(res){
+	      alert("연산자는 반드시 넣어야 합니다.");
+	   }
+	   
+		// 결과 출력하기..
+		let result1 = 0;
+		if(op == "+"){
+		  result1 = fir + sec;
+		   }else if(op == "-"){
+			result1 = fir - sec;
+		   }else if(op == "*"){
+			result1 = fir * sec;
+		   }else if(op == "/"){
+			result1 = fir / sec;
+		   }else if(op == "%"){
+			 result1 = fir % sec;
+	  	   }
+		document.getElementById('result').value = result1; 
+	   }
+	
+	  
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CSS</title>
+</head>
+<style>
+
+li {
+color : navy;
+font-weight: bold;
+line-height: 200%
+
+}
+
+p {
+margin-top:0.5em;
+margin-bottom:0.5em;
+margin-left: 1em;
+}
+
+</style>
+<body>
+
+   <h1>박스 모델(box model)</h1>
+   		<p>모든 HTML 요소는 박스(box) 모양으로 구성되며, 이것을 박스 모델(box model)이라고 부릅니다.</p>
+		<p>박스 모델은 HTML 요소를 패딩(padding), 테두리(border), 마진(margin), 그리고 내용(content)으로 구분합니다.</p><br>
+		<P><img src="images/img_css_boxmodel.png"></P>
+  	<ol>
+		<li>내용(content) : 텍스트나 이미지가 들어있는 박스의 실질적인 내용 부분입니다.</li>
+			<p>CSS에서 height와 width 속성을 설정할 때 그 크기가 가르키는 부분은 내용(content) 부분만을 대상으로 합니다.</p>
+		<li>패딩(padding) : 내용과 테두리 사이의 간격입니다. 패딩은 눈에 보이지 않습니다.</li>
+			<p>4개의 padding 속성값을 가질 때는 top, right, bottom, left 순으로 설정합니다.<p>
+			<p style=color:grey;>ex) padding: 10px 20px 30px 40px;</p>
+			<p>3개의 padding 속성값을 가질 때는 top, right와 left, bottom 순으로 설정합니다.<p>
+			<p style=color:grey;>ex) padding: 10px 20px 30px;</p>
+			<p>2개의 padding 속성값을 가질 때는 top과 bottom, right와 left 순으로 설정합니다.<p>
+			<p style=color:grey;>ex) padding: 10px 20px;<p>
+			<p>1개의 padding 속성값을 가질 때는 모든 패딩값을 같게 설정합니다.</p>
+			<p style=color:grey;>ex) padding: 10px;</p>
+		<li>테두리(border) : 내용와 패딩 주변을 감싸는 테두리입니다.</li>
+		<ul><li>border-style 속성<li>
+				<p>border 속성은 내용(content)과 패딩(padding) 영역을 둘러싸는 테두리의 스타일을 설정합니다.</p>
+				<p>- dotted : 테두리를 점선으로 설정함.</p>
+				<p>- dashed : 테두리를 약간 긴 점선으로 설정함.</p>
+				<p>- solid : 테두리를 실선으로 설정함.</p>
+				<p>- double : 테두리를 이중 실선으로 설정함.</p>
+				<p>- groove : 테두리를 3차원인 입체적인 선으로 설정하며, border-color 속성값에 영향을 받음.</p>
+				<p>- ridge : 테두리를 3차원인 능선효과가 있는 선으로 설정하며, border-color 속성값에 영향을 받음.</p>
+				<p>- inset : 테두리를 3차원인 내지로 끼운 선으로 설정하며, border-color 속성값에 영향을 받음.</p>
+				<p>- outset : 테두리를 3차원인 외지로 끼운 선으로 설정하며, border-color 속성값에 영향을 받음.</p>
+				<p>- none : 테두리를 없앰.</p>
+				<p>- hidden : 테두리가 존재하기는 하지만 표현되지는 않음</p>
+			<li>border-width 속성</li>
+				<p>px, em, cm 등과 같은 CSS 크기 단위를 이용하여 두께를 직접 설정할 수 있습니다.</p>
+			<li>border-color 속성</li>
+				<p>기본적인 color 속성값들뿐만 아니라 투명한 선을 나타내는 transparent 속성값을 사용할 수도 있습니다.</p>
+				<p>border-color 속성값이 설정되지 않으면 해당 요소의 color 속성값을 그대로 물려받습니다.</p>
+			<li>테두리(border)의 개별 설정</li>
+				<P>테두리의 위쪽, 오른쪽, 아래쪽, 왼쪽 부분에 대하여 개별적으로 스타일을 적용할 수 있습니다.</P>
+				<P>패딩과 마찬가지로, 4개의 border-style 속성값을 가질 때는 top, right, bottom, left 순,</P>
+				<P>3개의 속성값을 가질때는 top, right와 left, bottom 순, 2개의 속성값을 가질때는 top과 bottom, right와 left 순으로 설정합니다.</P>
+			</ul>
+		<li>마진(margin) : 테두리와 이웃하는 요소 사이의 간격입니다. 마진은 눈에 보이지 않습니다.</li>
+				<P>마진 영역은 패딩 영역과는 달리 background-color 속성으로 설정하는 배경색의 영향을 받지 않습니다.</P>
+				<P>margin 속성값을 inherit로 설정하면, 부모(parent) 요소의 margin 속성값을 그대로 물려받습니다.</P>
+				<P>패딩과 마찬가지로, 4개의 border-style 속성값을 가질 때는 top, right, bottom, left 순,</P>
+				<P>3개의 속성값을 가질때는 top, right와 left, bottom 순, 2개의 속성값을 가질때는 top과 bottom, right와 left 순으로 설정합니다.</P>
+	</ol>	
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!--******************************************************************************
+	메가코딩 login페이지
+
+	update : 2024-01-22
+	
+	관리자 : pnj
+	
+   메가 코딩 매뉴얼 :
+  - 
+ ******************************************************************************-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../bootstap/css/bootstrap.min.css" >
+    <title>워틀</title>
+</head>
+<body>
+    <style>
+        input{
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            text-align: center;
+        }
+    </style>
+    <input class="input">
+    <input class="input">
+    <input class="input">
+    <input class="input">
+    <input class="input">
+    <button class="btn btn-outline-dark">정답</button>
+
+    <script>
+        const Correct_dt=['alert','input','class','click','width','style','title'];
+        const Correct=Correct_dt[Math.floor(Math.random() * Correct_dt.length)];
+        //alert(Correct);
+        document.querySelector('button').addEventListener('click',
+        function(){//버튼을 누르면 실행
+            var input = document.querySelectorAll('.input');
+
+            for (let i=0; i<5; i++){
+                if(input[i].value == Correct[i]){
+                    input[i].style.background = 'green';//위치가 맞으면
+                }else if (Correct.includes(input[i].value)){
+                    input[i].style.background= 'yellow';//문자만 맞으면
+                }else{
+                    input[i].style.background= 'RED';//값이 없는경우
+                }
+                input[i].classList.remove('input');
+            }
+            
+            var template = `<div>
+                <input class= "input">
+                <input class= "input">
+                <input class= "input">
+                <input class= "input">
+                <input class= "input">        
+            </div>`;
+            document.querySelector('body').insertAdjacentHTML
+            ('beforeend', template);
+
+        })
+    </script>
+</body>
+</html>

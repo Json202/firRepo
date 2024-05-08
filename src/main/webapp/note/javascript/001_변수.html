@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h2>변수</h2>
+  <p> 자바스크립트에서 변수는 데이터를 저장하고 참조하는 데 사용되는 식별자(identifier)입니다. 변수를 사용하면 값을 보다 효과적으로 관리하고 코드의 유연성을 높일 수 있습니다. 다음은 자바스크립트 변수에 대한 기본적인 내용입니다</p> 
+
+  <h2>변수 선언</h2>
+  <p>변수를 선언할 때에는 var, let,const 키워드를 사용합니다.</p>
+  
+  <h2>var</h2>
+  ES5까지 사용되었으나, ES6에서 let과 const가 도입되면서 잘 사용하지 않습니다.
+  var myVariable = 10;
+  
+  <h2>let</h2>
+  <p>블록 범위(block-scoped) 변수를 선언합니다. 변수의 값을 변경할 수 있습니다.
+  let myVariable = 10;</p>
+  
+  <h2>const</h2>
+  <p>블록 범위 변수를 선언하며, 한 번 할당된 값은 변경할 수 없습니다.</p>
+  <code>const pi = 3.14;</code></p>
+  
+  <h2>변수 사용법</h2>
+  변수에 저장된 값을 읽고 변경하려면 변수 이름을 사용합니다.
+  <code><br>let myNumber = 42;<br><br>
+  // 변수 읽기<br>
+  console.log(myNumber); // 42<br><br>
+  // 변수 변경<br>
+  myNumber = 100;<br>
+  console.log(myNumber); // 100</code>
+  
+  <h2>기본 타입</h2>
+  타입(data type)이란 프로그램에서 다룰 수 있는 값의 종류를 의미합니다.<br>
+  자바스크립트에서는 여러 가지 형태의 타입을 미리 정의하여 제공하고 있으며, 이것을 기본 타입이라고 합니다.<br><br>
+  
+  1. 숫자(number)<br>
+  2. 문자열(string)<br>
+  3. 불리언(boolean)<br>
+  4. 심볼(symbol) : ECMAScript 6부터 제공됨<br>
+  5. undefined<br>
+  6. 객체(object)<br>
+  
+  <h2>숫자(number)</h2>
+  자바스크립트는 다른 언어와는 달리 정수와 실수를 따로 구분하지 않고, 모든 수를 실수 하나로만 표현합니다.<br>
+  <code>var firstNum = 10;     // 소수점을 사용하지 않은 표현<br>
+  var secondNum = 10.00; // 소수점을 사용한 표현<br>
+  var thirdNum = 10e6;   // 10000000<br>
+  var fourthNum = 10e-6; // 0.00001<br></code>
+  
+  <h2>문자열(string)</h2>
+  자바스크립트에서 문자열은 큰따옴표("")나 작은따옴표('')로 둘러싸인 문자의 집합을 의미합니다.<br>
+  큰따옴표는 작은따옴표로 둘러싸인 문자열에만 포함될 수 있으며, 작은따옴표는 큰따옴표로 둘러싸인 문자열에만 포함될 수 있습니다.<br>
+  <code>var firstStr = "이것도 문자열입니다.";      // 큰따옴표를 사용한 문자열<br>
+  var secondStr = '이것도 문자열입니다.';     // 작은따옴표를 사용한 문자열<br>
+  var thirdStr = "나의 이름은 '홍길동'이야."  // 작은따옴표는 큰따옴표로 둘러싸인 문자열에만 포함될 수 있음.<br>
+  var fourthStr = '나의 이름은 "홍길동"이야.' // 큰따옴표는 작은따옴표로 둘러싸인 문자열에만 포함될 수 있음.<br><br></code>
+  
+  자바스크립트에서는 숫자와 문자열을 더할 수도 있습니다.<br>
+  이럴 경우에 자바스크립트는 숫자를 문자열로 자동 변환하여, 두 문자열을 연결하는 연산을 수행합니다.<br>
+  <br> <code>var num = 10;
+  var str = "JavaScript";
+  document.getElementById("result").innerHTML = (num + str); // 10JavaScript</code>
+  
+  <h2>불리언(boolean)</h2>
+  
+  불리언 값은 참(true)과 거짓(false)을 표현합니다.<br>
+  자바스크립트에서 불리언 값은 예약어인 true와 false를 사용하여 나타낼 수 있습니다.<br>
+  <code>var firstNum = 10;<br>
+  var secondNum = 11;<br>
+  document.getElementById("result").innerHTML = (firstNum == secondNum); // false<br></code>
+  
+  <h2>심볼(symbol)</h2>
+  심볼 타입은 ECMAScript 6부터 새롭게 추가된 타입입니다.<br>
+  심볼은 유일하고 변경할 수 없는 타입으로, 객체의 프로퍼티를 위한 식별자로 사용할 수 있습니다.<br>
+  <code>var sym = Symbol("javascript");  // symbol 타입<br>
+  var symObj = Object(sym);        // object 타입<br></code>
+  
+  <h2>typeof 연산자</h2>
+  typeof 연산자는 피연산자의 타입을 반환하는 피연산자가 단 하나뿐인 연산자입니다.<br>
+  <code>typeof 10;        // number 타입<br>
+  typeof "문자열";  // string 타입<br>
+  typeof true;      // boolean 타입<br>
+  typeof undefined; // undefined 타입<br>
+  typeof null;      // object 타입<br></code>
+  
+  <h2>null과 undefined</h2>
+  자바스크립트에서 null이란 object 타입이며, 아직 '값'이 정해지지 않은 것을 의미합니다.<br>
+  또한, undefined란 null과는 달리 '타입'이 정해지지 않은 것을 의미합니다.<br>
+  따라서 자바스크립트에서 undefined는 초기화되지 않은 변수나 존재하지 않는 값에 접근할 때 반환됩니다.<br>
+  <code>var num;          // 초기화하지 않았으므로 undefined 값을 반환함.<br>
+  var str = null;   // object 타입의 null 값<br>
+  typeof secondNum; // 정의되지 않은 변수에 접근하면 undefined 값을 반환함.<br></code><br>
+  
+  null과 undefined는 동등 연산자(==)와 일치 연산자(===)로 비교할 때 그 결괏값이 다르므로 주의해야 합니다.<br>
+  null과 undefined는 타입을 제외하면 같은 의미지만, 타입이 다르므로 일치하지는 않습니다.<br>
+ <code> null ==  undefined; // true<br>
+  null === undefined; // false<br></code>
+  
+  <h2>객체(object)</h2>
+  자바스크립트의 기본 타입은 객체(object)입니다.<br>
+  객체(object)란 실생활에서 우리가 인식할 수 있는 사물로 이해할 수 있습니다.<br>
+  객체는 여러 프로퍼티(property)나 메소드(method)를 같은 이름으로 묶어놓은 일종의 집합체입니다.<br>
+  <code>ar dog = { name: "해피", age: 3 }; // 객체의 생성<br>
+  // 객체의 프로퍼티 참조<br>
+  document.getElementById("result").innerHTML =<br>
+      "강아지의 이름은 " + dog.name + "이고, 나이는 " + dog.age + "살 입니다.";<br></code>
+  
+  <h2>변수 범위</h2>
+  변수의 범위는 선언된 위치에 따라 다르며, var는 함수 범위를, let과 const는 블록 범위를 가집니다. 함수나 블록 내에서 선언된 변수는 외부에서 접근할 수 없습니다.<br>
+  <code></code>function exampleFunction() {<br>
+    var functionScoped = 'Function Scoped';  // 함수 범위 변수<br>
+    if (true) {<br>
+      let blockScoped = 'Block Scoped';      // 블록 범위 변수<br>
+      console.log(blockScoped);              // Block Scoped 출력 가능<br>
+    }<br>
+    console.log(functionScoped);            // Function Scoped 출력 가능<br>
+    // console.log(blockScoped);  // 에러: blockScoped는 함수 내부에서만 유효<br>
+  }<br>
+  변수는 프로그램의 상태를 저장하고 조작하는 핵심적인 도구 중 하나이며, 올바르게 활용하면 코드를 더 읽기 쉽게 만들고 유지 보수성을 향상시킬 수 있습니다.<br>
+  
+  <h2>타입 변환(type conversion)</h2>
+  자바스크립트는 타입 검사가 매우 유연한 언어입니다.<br>
+  자바스크립트의 변수는 타입이 정해져 있지 않으며, 같은 변수에 다른 타입의 값을 다시 대입할 수도 있습니다.<br>
+  <code>var num = 20; // Number 타입의 20<br>
+  num = "이십"; // String 타입의 "이십"<br>
+  var num;      // 한 변수에 여러 번 대입할 수는 있지만, 변수의 재선언은 할 수 없습니다. 재선언문은 무시됩니다.<br></code>
+  
+  <h2>묵시적 타입 변환(implicit type conversion)</h2>
+  <code>문자열 값이 오길 기대하는 곳에 숫자가 오더라도 자바스크립트는 알아서 숫자를 문자열로 변환하여 사용합니다.<br>
+  10 + "문자열"; // 문자열 연결을 위해 숫자 10이 문자열로 변환됨.<br>
+  "3" * "5";     // 곱셈 연산을 위해 두 문자열이 모두 숫자로 변환됨.<br>
+  1 - "문자열";  // NaN</code>
+  
+  <h2>명시적 타입 변환(explicit type conversion)</h2>
+  자바스크립트에서는 묵시적 타입 변환을 많이 사용하지만, 명시적으로 타입을 변환할 방법도 제공합니다.<br>
+  명시적 타입 변환을 위해 자바스크립트가 제공하는 전역 함수는 다음과 같습니다.<br>
+  <code>Number("10"); // 숫자 10<br>
+  String(true); // 문자열 "true"<br>
+  Boolean(0);   // 불리언 false<br>
+  Object(3);    // new Number(3)와 동일한 결과로 숫자 3<br></code>
+  
+  <h2>문자열을 숫자로 변환</h2>
+  parseInt()	문자열을 파싱하여 특정 진법의 정수를 반환함.<br>
+  parseFloat()	문자열을 파싱하여 부동 소수점 수를 반환함.<br>
+</body>
+</html>

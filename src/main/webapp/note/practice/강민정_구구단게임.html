@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="../../bootstap/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #output {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    #guessInput {
+      width: 50px;
+      text-align: center;
+    }
+    #submitGuess {
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    
+   p{
+	   display: block;
+   }
+  </style>
+  <script>
+
+
+	  
+	</script>
+</head>
+<body>
+
+	<h1>구구단 Game</h1>
+	<p>1단부터 9단까지 정답 맞추기 게임!</p>
+	
+	<div id="output">정답을 입력하세요.</div>
+	<p id="gugu"></p>
+  	<input type="text" id="guessInput" placeholder="숫자 입력">
+  	<button id="submitGuess" onclick="gugugu()">제출</button>
+	<script>
+		var rNa = Math.floor(Math.random() * 9) + 1;
+		var rNb = Math.floor(Math.random() * 9) + 1;
+		document.getElementById("gugu").innerHTML= rNa + " x " + rNb;
+		
+	function gugugu (){
+		let res = rNa * rNb ;
+		let sub = document.getElementById("guessInput").value;
+		
+		if(res == sub){
+			alert("정답입니다.")
+			 document.getElementById("guessInput").value="";
+			 
+			regugu ();
+		}else{
+			alert("다시입력하세요.")
+		}
+	  }
+	  
+	  function regugu (){
+		rNa = Math.floor(Math.random() * 9) + 1;
+		rNb = Math.floor(Math.random() * 9) + 1;
+		document.getElementById("gugu").innerHTML= rNa + " x " + rNb + " = ";
+	  }
+	  
+	</script>
+</body>
+</html>
+

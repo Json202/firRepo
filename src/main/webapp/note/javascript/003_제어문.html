@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2><strong>제어문</h2></strong><br/>
+    <p>자바스크립트에서 제어문은 코드의 흐름을 조작하는 데 사용됩니다. 주로 조건문과 반복문이 있습니다.</p>
+<h2><strong>1. 조건문</h2></strong><br/>
+    if 문은 표현식의 결과가 참(true)이면 주어진 실행문을 실행하며, 거짓(false)이면 아무것도 실행하지 않습니다.<br/>
+    조건문은 주어진 조건에 따라 코드 블록을 실행하거나 건너뛰는 데 사용됩니다.</p>
+<h2><strong>if 문</h2></strong><br/>
+    let x = 10;<br/>
+    if (x &gt; 5) {<br/>
+    &nbsp; &nbsp; &nbsp;console.log("x는 5보다 큽니다.");<br/>
+}else {<br/>
+    &nbsp; &nbsp; &nbsp;console.log("x는 5보다 작거나 같습니다.");</p>
+<p>}</p>
+<h2><strong>switch 문</h2></strong><br/>
+    let day = "월";<br/>
+    switch (day) {<br/>
+    &nbsp; &nbsp; case "월":<br/>
+     &nbsp; &nbsp; console.log("월요일입니다.");<br/>
+     &nbsp; &nbsp; break;<br/>
+     &nbsp; &nbsp; case "화":<br/>
+     &nbsp; &nbsp; console.log("화요일입니다.");<br/>
+     &nbsp; &nbsp; break;<br/>
+     &nbsp; &nbsp; default:<br/>
+     &nbsp; &nbsp; console.log("다른 요일입니다.");<br/>
+}</p>
+<p><br/>
+    <strong>2. 반복문</h2></strong><br/>
+    반복문은 동일한 코드를 여러 번 실행하는 데 사용됩니다.</p>
+<p>for 문<br/>
+    for (let i = 0; i &lt; 5; i++) {<br/>
+     &nbsp; &nbsp; console.log(i);<br/>
+}</p>
+<h2><strong>while 문</h2></strong><br/>
+    let count = 0;<br/>
+    while (count &lt; 3) {<br/>
+     &nbsp; &nbsp; console.log("카운트: " + count);<br/>
+     &nbsp; &nbsp; count++;<br/>
+}</p>
+<h2><strong>do-while 문</h2></strong><br/>
+    let num = 5;</p>
+<p>do {<br/>
+     &nbsp; &nbsp; console.log("숫자: " + num);<br/>
+     &nbsp; &nbsp; num--;<br/>
+} while (num &gt; 0);</p>
+<p>자바스크립트에서 제어문은 코드의 흐름을 조작하는 데 사용됩니다. 주로 조건문과 반복문이 있습니다.</p>
+<h2><strong>1. 조건문</h2></strong><br/>
+    조건문은 주어진 조건에 따라 코드 블록을 실행하거나 건너뛰는 데 사용됩니다.</p>
+<h2><strong>if 문</h2></strong><br/>
+    let x = 10;</p>
+<p>if (x &gt; 5) {<br/>
+     &nbsp; &nbsp; console.log("x는 5보다 큽니다.");<br/>
+} else {<br/>
+     &nbsp; &nbsp; console.log("x는 5보다 작거나 같습니다.");<br/>
+}<br/>
+    <strong>switch 문</h2></strong><br/>
+    let day = "월";</p>
+<p>switch (day) {<br/>
+     &nbsp; &nbsp; case "월":<br/>
+     &nbsp; &nbsp; console.log("월요일입니다.");<br/>
+     &nbsp; &nbsp; break;<br/>
+     &nbsp; &nbsp; case "화":<br/>
+     &nbsp; &nbsp; console.log("화요일입니다.");<br/>
+     &nbsp; &nbsp; break;<br/>
+     &nbsp; &nbsp; default:<br/>
+     &nbsp; &nbsp; console.log("다른 요일입니다.");<br/>
+}<br/>
+    <strong>2. 반복문</h2></strong><br/>
+    반복문은 동일한 코드를 여러 번 실행하는 데 사용됩니다.</p>
+<h2><strong>for 문</h2></strong><br/>
+    for (let i = 0; i &lt; 5; i++) {<br/>
+     &nbsp; &nbsp; console.log(i);<br/>
+}<br/>
+    <strong>while 문</h2></strong><br/>
+    let count = 0;</p>
+<p>while (count &lt; 3) {<br/>
+     &nbsp; &nbsp; console.log("카운트: " + count);<br/>
+     &nbsp; &nbsp; count++;<br/>
+}<br/>
+    <strong>do-while 문</h2></strong><br/>
+    let num = 5;</p>
+<p>do {<br/>
+     &nbsp; &nbsp; console.log("숫자: " + num);<br/>
+     &nbsp; &nbsp; num--;<br/>
+} while (num &gt; 0);<br/>
+    조건문과 반복문을 적절히 사용하여 코드를 효과적으로 구성할 수 있습니다. 이를 통해 다양한 상황에 대응하고, 코드를 간결하게 작성할 수 있습니다.</p>
+<h2><strong>루프의 제어</h2></strong><br/>
+    일반적으로 표현식의 검사를 통해 루프로 진입하면, 다음 표현식을 검사하기 전까지 루프 안에 있는 모든 실행문을 실행합니다.<br/>
+    하지만 continue 문과 break 문은 이러한 일반적인 루프의 흐름을 사용자가 직접 제어할 수 있게 해줍니다.<br/>
+    label 문을 사용하면 continue 문과 break 문의 동작이 프로그램의 흐름을 특정 영역으로 이동시킬 수 있습니다.</p>
+<h2><strong>label 문</h2></strong><br/>
+    label 문은 프로그램 내의 특정 영역을 식별할 수 있도록 해주는 식별자입니다.<br/>
+    label 문을 사용하면 continue 문과 break 문의 동작이 프로그램의 흐름을 특정 영역으로 이동시킬 수 있습니다.<br/>
+    label:<br/>
+    식별하고자 하는 특정 영역</p>
+<p>다음 예제에서 라벨인 arrIndex는 그 이후에 나오는 for 문 전체를 가리키는 식별자로 사용되고 있습니다.<br/>
+    arrIndex:<br/>
+    for (var i in arr) {<br/>
+     &nbsp; &nbsp; document.write(i);<br/>
+}</p>
+<h2><strong>continue 문</h2></strong><br/>
+    continue 문은 루프 내에서 사용하여 해당 루프의 나머지 부분을 건너뛰고, 바로 다음 표현식의 판단으로 넘어가게 합니다.<br/>
+    보통 반복문 내에서 특정 조건에 대한 처리를 제외하고자 할 때 자주 사용됩니다.<br/>
+    var exceptNum = 3;<br/>
+    for (var i = 0; i &lt;= 100; i++) {<br/>
+     if (i % exceptNum == 0) // exceptNum의 배수는 출력하지 않음.<br/>
+     &nbsp; &nbsp; continue;<br/>
+     &nbsp; &nbsp; document.write(i + " ");<br/>
+}</p>
+<h2><strong>break 문</h2></strong><br/>
+    break 문은 루프 내에서 사용하여 해당 반복문을 완전히 종료시키고, 반복문 바로 다음에 위치한 실행문으로 프로그램의 흐름을 이동시킵니다.<br/>
+    즉, 루프 내에서 표현식의 판단 결과에 상관없이 반복문을 완전히 빠져나가고 싶을 때 사용합니다.<br/>
+    var lectures = ["html", "css", "자바스크립트", "php"];<br/>
+    var topic = "자바스크립트";<br/>
+    for (var i = 0; i &lt; lectures.length; i++) {<br/>
+     if (lectures[i] == topic) {<br/>
+     &nbsp; &nbsp; document.write(topic + " 과목은 " + (i + 1) + "번째 과목입니다.");<br/>
+     &nbsp; &nbsp; break; // 원하는 값을 찾은 후에는 더 이상 for 문을 반복하지 않고 빠져나감.<br/>
+     &nbsp; &nbsp; }<br/>
+}</p>
+</body>
+</html>

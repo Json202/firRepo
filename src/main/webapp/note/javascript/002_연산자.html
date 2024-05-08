@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2><strong>연산자(operator)</h2></strong><br/>
+        자바스크립트는 여러 종류의 연산을 위한 다양한 연산자(operator)를 제공하고 있습니다.</p>
+<p>자바스크립트에서 연산자는 값을 계산하고 조작하는 데 사용되는 기호 또는 키워드입니다. 다양한 종류의 연산자가 있으며, 주로 산술 연산, 비교 연산, 논리 연산 등으로 구분됩니다</p>
+<h2><strong>1. 산술 연산자산술 연산자는 숫자 간의 계산에 사용됩니다.</h2></strong><br/>
+    산술 연산자 설명</p>
+<p>+ 왼쪽 피연산자의 값에 오른쪽 피연산자의 값을 더함.<br/>
+    - 왼쪽 피연산자의 값에서 오른쪽 피연산자의 값을 뺌.<br/>
+    * 왼쪽 피연산자의 값에 오른쪽 피연산자의 값을 곱함.<br/>
+    / 왼쪽 피연산자의 값을 오른쪽 피연산자의 값으로 나눔.<br/>
+    % 왼쪽 피연산자의 값을 오른쪽 피연산자의 값으로 나눈 후, 그 나머지를 반환함.</p>
+<p>+ (더하기): 두 값을 더합니다.<br/>
+    let sum = 5 + 3; // 8</p>
+<p>- (빼기): 오른쪽 값을 왼쪽 값에서 뺍니다.<br/>
+    let difference = 10 - 4; // 6</p>
+<p>* (곱하기): 두 값을 곱합니다.<br/>
+    let product = 3 * 7; // 21</p>
+<p>/ (나누기): 왼쪽 값을 오른쪽 값으로 나눕니다.<br/>
+    let quotient = 15 / 3; // 5</p>
+<p>% (나머지): 왼쪽 값을 오른쪽 값으로 나눈 후 나머지를 반환합니다.<br/>
+    let remainder = 10 % 3; // 1</p>
+<h2><strong>2. 비교 연산자</h2></strong><br/>
+    비교 연산자는 값을 비교하여 불리언 값을 반환합니다</p>
+<p>== (동등): 값이 동등하면 true, 아니면 false.<br/>
+    console.log(5 == '5'); // true (값만 비교)</p>
+<p>=== (일치): 값과 데이터 타입이 모두 동등하면 true, 아니면 false.<br/>
+    console.log(5 === '5'); // false (값과 데이터 타입 비교)</p>
+<p>!= (부등): 값이 다르면 true, 같으면 false.<br/>
+    console.log(10 != '10'); // false</p>
+<p>!== (불일치): 값이나 데이터 타입 중 하나라도 다르면 true, 둘 다 같으면 false.<br/>
+    console.log(10 !== '10'); // true<br/>
+    &gt; (크다), &lt; (작다), &gt;= (크거나 같다), &lt;= (작거나 같다): 숫자 간의 크기를 비교합니다.</p>
+<h2><strong>3. 논리 연산자</h2></strong><br/>
+    논리 연산자는 불리언 값 간의 논리 연산에 사용됩니다.</p>
+<p>&amp;&amp; (논리 AND): 양쪽 모두 true일 때만 true.<br/>
+    console.log(true &amp;&amp; false); // false</p>
+<p>|| (논리 OR): 양쪽 중 하나라도 true이면 true.<br/>
+    console.log(true || false); // true</p>
+<p>! (논리 NOT): 불리언 값을 반전시킵니다.<br/>
+    console.log(!true); // false</p>
+<h2><strong>4. 할당 연산자</h2></strong><br/>
+    할당 연산자는 변수에 값을 할당합니다.<br/>
+    = (할당): 오른쪽 값을 왼쪽 변수에 할당합니다.</p>
+<p>let x = 10;<br/>
+    +=, -=, *=, /= 등 (복합 할당): 현재 값과 연산하여 결과를 변수에 할당합니다.</p>
+<p>let y = 5;<br/>
+    y += 3; // y = y + 3;<br/>
+    자바스크립트에는 이외에도 다양한 연산자가 있으며, 이를 활용하여 복잡한 계산과 조작을 수행할 수 있습니다.</p>
+<h2><strong>5. 증감 연산자</h2></strong><br/>
+    증감 연산자는 변수의 값을 1씩 증가시키거나 감소시킵니다.</p>
+<p>++ (증가): 변수의 값을 1 증가시킵니다.<br/>
+    let count = 0;<br/>
+    count++; // count는 이제 1</p>
+<p>-- (감소): 변수의 값을 1 감소시킵니다.<br/>
+    let total = 10;<br/>
+    total--; // total은 이제 9</p>
+<h2><strong>6. 조건 (삼항) 연산자</h2></strong><br/>
+    삼항 연산자는 조건에 따라 값을 선택합니다.</p>
+<p>조건 ? 값1 : 값2 (삼항 연산자): 조건이 true이면 값1을 반환하고, false이면 값2를 반환합니다.<br/>
+    let age = 20;<br/>
+    let result = age &gt;= 18 ? '성인' : '미성년자';</p>
+<h2><strong>7. 비트 연산자</h2></strong><br/>
+    비트 연산자는 이진수로 표현된 숫자의 비트를 조작합니다.<br/>
+    &amp; (비트 AND), | (비트 OR), ^ (비트 XOR): 비트별 AND, OR, XOR 연산을 수행합니다.<br/>
+    let a = 5; // 이진수: 0101<br/>
+    let b = 3; // 이진수: 0011<br/>
+    console.log(a &amp; b); // 0101 &amp; 0011 = 0001 (2진수), 1 (10진수)<br/>
+    이러한 연산자들을 조합하여 다양한 작업을 수행할 수 있습니다. 자바스크립트에서 연산자는 프로그래밍에서 핵심적인 역할을 하며, 변수와 함께 사용하여 다양한 로직을 구현할 수 있습니다.</p>
+<h2><strong>8.쉼표 연산자</h2></strong><br/>
+    쉼표 연산자를 for 문에서 사용하면, 루프마다 여러 변수를 동시에 갱신할 수 있습니다<br/>
+    // 루프마다 i의 값은 1씩 증가하고, 동시에 j의 값은 1씩 감소함.<br/>
+    for (var i = 0, j = 9; i &lt;= j; i++, j--) {<br/>
+     document.write("i의 값은 " + i + "이고, j의 값은 " + j + "입니다.&lt;br&gt;");<br/>
+}</p>
+<h2><strong>9.delete 연산자</h2></strong><br/>
+    delete 연산자는 피연산자인 객체, 객체의 프로퍼티(property) 또는 배열의 요소(element) 등을 삭제해 줍니다.<br/>
+    피연산자가 성공적으로 삭제되었을 경우에는 참(true)을 반환하고, 삭제하지 못했을 경우에는 거짓(false)을 반환합니다.<br/>
+    이 연산자는 피연산자가 단 하나뿐인 단항 연산자이며, 피연산자의 결합 방향은 오른쪽에서 왼쪽입니다.<br/>
+    var arr = [1, 2, 3]; // 배열 생성<br/>
+    delete arr[2]; // 배열의 원소 중 인덱스가 2인 요소를 삭제함.<br/>
+    document.write(arr + "&lt;br&gt;"); // [1, 2, ]<br/>
+    // 배열에 빈자리가 생긴 것으로 undefined 값으로 직접 설정된 것은 아님.<br/>
+    document.write(arr[2] + "&lt;br&gt;");<br/>
+    // 배열의 요소를 삭제하는 것이지 배열의 길이까지 줄이는 것은 아님.<br/>
+    document.write(arr.length);</p>
+<h2><strong>10.typeof 연산자</h2></strong><br/>
+    typeof 연산자는 피연산자의 타입을 반환합니다.<br/>
+    이 연산자는 피연산자가 단 하나뿐인 단항 연산자이며, 피연산자의 결합 방향은 오른쪽에서 왼쪽입니다.<br/>
+    자바스크립트에서 많이 사용하는 값과 그 값에 대한 typeof 연산자의 결괏값은 다음과 같습니다.</p>
+<table style="height: 188px; width: 399px; float: left;" border="1">
+<tbody>
+<tr>
+<td style="width: 182.141px; text-align: center;">값</td>
+<td style="width: 198.859px; text-align: center;">typeof 연산자의 결괏값</td>
+</tr>
+<tr>
+<td style="width: 182.141px; text-align: center;">숫자, NaN</td>
+<td style="width: 198.859px; text-align: center;">number</td>
+</tr>
+<tr>
+<td style="width: 182.141px; text-align: center;">
+<p>문자열</p>
+</td>
+<td style="width: 198.859px; text-align: center;">string</td>
+</tr>
+<tr>
+<td style="width: 182.141px; text-align: center;">true, false</td>
+<td style="width: 198.859px; text-align: center;">boolean</td>
+</tr>
+<tr>
+<td style="width: 182.141px; text-align: center;">null</td>
+<td style="width: 198.859px; text-align: center;">object</td>
+</tr>
+<tr>
+<td style="width: 182.141px; text-align: center;">undefined</td>
+<td style="width: 198.859px; text-align: center;">undefined</td>
+</tr>
+<tr>
+<td style="width: 182.141px; text-align: center;">함수</td>
+<td style="width: 198.859px; text-align: center;">function</td>
+</tr>
+<tr>
+<td style="width: 182.141px; text-align: center;">함수가 아닌 객체</td>
+<td style="width: 198.859px; text-align: center;">object</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><strong>11.instanceof 연산자는 피연산자인 객체가 특정 객체의 인스턴스인지 아닌지를 확인해 줍니다.</h2></strong><br/>
+    피연산자가 특정 객체의 인스턴스이면 참(true)을 반환하고, 특정 객체의 인스턴스가 아니면 거짓(false)을 반환합니다.<br/>
+    이 연산자는 두 개의 피연산자를 가지는 이항 연산자이며, 피연산자들의 결합 방향은 왼쪽에서 오른쪽입니다.<br/>
+    var str = new String("이것은 문자열입니다.");<br/>
+    str instanceof Object; // true<br/>
+    str instanceof String; // true<br/>
+    str instanceof Array; // false<br/>
+    str instanceof Number; // false<br/>
+    str instanceof Boolean; // false</p>
+<p>인스턴스와 객체에 대한 더 자세한 사항은 자바스크립트 객체의 개념 수업에서 확인할 수 있습니다.<br/>
+    void 연산자<br/>
+    void 연산자는 피연산자로 어떤 타입의 값이 오던지 상관없이 언제나 undefined 값만을 반환합니다.</p>
+<p>이 연산자는 피연산자가 단 하나뿐인 단항 연산자이며, 피연산자의 결합 방향은 오른쪽에서 왼쪽입니다.<br/>
+    &lt;a href="javascript:void(0)"&gt;이 링크는 동작하지 않습니다.&lt;/a&gt;<br/>
+    &lt;a href="javascript:void(document.body.style.backgroundColor='yellow')"&gt;<br/>
+     이 링크도 동작하지 않지만, HTML 문서의 배경색을 바꿔줍니다.<br/>
+    &lt;/a&gt;<br/>
+    위의 예제처럼 void 연산자는 정의되지 않은 원시 타입의 값을 얻기 위해 void(0)과 같은 형태로 종종 사용됩니다.</p>
+</body>
+</html>

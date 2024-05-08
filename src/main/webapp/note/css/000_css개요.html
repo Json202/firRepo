@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CSS</title>
+</head>
+
+<body>
+
+   <h1>CSS(Cascading Style Sheets)</h1>
+	   <p>웹 페이지의 스타일과 내용적인 부분을 서로 분리해 놓은 서식을 스타일 시트라고 합니다.
+		  이러한 스타일 시트를 이용하면 웹 페이지의 스타일을 편리하게 개발할 수 있습니다.</p><br>
+
+
+   <h2>주요 특징</h2>
+   <h3>웹 페이지에 스타일과 레이아웃을 적용</h3>
+	   <p>CSS는 HTML, XHTML, XML 같은 문서의 스타일을 꾸밀때 사용하는 시트언어입니다.</p>
+	   
+	   <p>HTML로 문서의 뼈대를 만들면 CSS는 문서의 화장을 맡고 있는 셈인데요.</p>
+	   
+	   <p>글꼴이나, 배경색, 너비와 높이, 위치 등을 지정하거나, 웹 브라우저, 스크린 크기, 장치에 따라서 화면을 다르게 표시될 수 있도록 
+		  지정할 수 있습니다.</p>
+
+   <h2>CSS 문법</h2>
+
+	   <img src="images/css문법.png">
+	   
+	   <p>CSS의 문법은 선택자(selector)와 선언부(declaratives)로 구성됩니다.</p>
+	
+		<p>선택자는 CSS를 적용하고자 하는 HTML 요소(element)를 가리킵니다.</p>
+	
+		<p>선언부는 하나 이상의 선언들을 세미콜론(;)으로 구분하여 포함할 수 있으며, 중괄호({ })를 사용하여 전체를 둘러쌉니다.</p>
+	
+		<p>각 선언은 CSS 속성명(property)과 속성값(value)을 가지며, 그 둘은 콜론(:)으로 연결됩니다.</p>
+	
+		<p>이러한 CSS 선언(declaration)은 언제나 마지막에 세미콜론(;)으로 끝마칩니다.</p>
+   
+   <h2> CSS를 적용하는 방법</h2>
+
+		<p>HTML 문서에 CSS 스타일을 적용할 때에는 다음과 같이 세 가지 방법을 사용할 수 있습니다.</p>
+	
+	<ol>
+		<li>인라인 스타일(Inline style)</li>
+			<ul><li>속성처럼 style 적용</li></ul><br>
+			
+		<li>내부 스타일 시트(Internal style sheet)</li>
+			<ul><li>style tag를 사용</li></ul><br>	
+			
+		<li>외부 스타일 시트(External style sheet)</li>
+			<ul><li>css파일을 별로도 만들어 html 문서에 연결</li></ul><br>
+ 	</ol>
+ 	
+ 	<h2>스타일 적용의 우선순위</h2>
+ 	
+ 	<ol>
+		<li>인라인 스타일 (HTML 요소 내부에 위치함)</li><br>
+	
+		<li>내부 / 외부 스타일 시트 (HTML 문서의 head 요소 내부에 위치함)</li><br>
+		
+		<li>웹 브라우저 기본 스타일</li><br>
+  	</ol>
+  	<ul style="line-height:200%">	
+ 		<li>예를 들어 인라인 스타일이 적용된 태그는 내부나 외부 스타일 시트와는 상관없이 무조건 <b style="color:rgb(255, 0, 0);">인라인 스타일이 우선 적용</b>됩니다.</li>
+		<li>또한, 내부 스타일 시트와 외부 스타일 시트는 가장 마지막에 적용된 스타일 시트가 적용됩니다.</li>
+		<li>웹 사이트의 스타일 적용은 <b style="color:rgb(255, 0, 0);">외부 스타일 시트를 사용하는 것이 유지 보수도 편하며, 가장 안정적</b>입니다.</li>
+	<ul>
+ </body>
+
+</html>

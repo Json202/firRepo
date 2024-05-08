@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>html</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    
+
+	<style>
+		
+		.outer {
+			width: 300px;
+			height: 300px;
+			position: relative;
+		}
+
+		div.mycontainer {
+			width: 100%;
+			overflow: auto;
+		}
+
+		div.mycontainer div {
+			width: 33%;
+			float: left;
+		}
+
+		#dv1 {
+			text-align: left;
+		}
+
+		#anc {
+			text-decoration: none;
+			color: inherit;
+		}
+	</style>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0, user-scalable=no" />
+
+
+</head>
+
+<body>
+
+	<div>
+		<div>
+			<div class="mycontainer">
+				<h1>Reference Room</h1>
+
+				<hr>
+				<div id="dv1">
+					<article>
+						<h3>W3schools</h3>
+
+						<p>HTML, Python< SQL 등<br>
+							 왠만한 프로그래밍 언어의<br>
+								튜토리얼을 통해 코딩공부를<br>
+								할 수 있는 사이트입니다.</p>
+								<br>
+								<button type="button" class="btn btn-outline-dark">
+									<a href="https://www.w3schools.com/" target="_parent" id="anc">
+										바로가기
+									</a>
+								</button>
+					</article>
+				</div>
+				<div id="dv1">
+					<article>
+						<h3>MDN</h1>
+
+							<p>모질라 재단 및 다른 IT기업들이<br>
+							사용하는 웹 개발을 위한 문서 저장소이자<br>
+							수많은 프로그래밍 입문자들을 위한<br>
+							학습 장소입니다.</p>
+							<br>
+							<button type="button" class="btn btn-outline-dark">
+								<a href="https://developer.mozilla.org/ko/" target="_parent" id="anc">
+									바로가기
+								</a>
+							</button>
+
+					</article>
+				</div>
+				<div id="dv1">
+					<article>
+						<h3>Bootstrap</h1>
+
+							<p>부트스트랩이란 프론트앤드 개발을<br>
+							쉽고 빠르게 하는 프레임워크 입니다.<br>
+							각종 레이아웃, 입력창, 버튼 같은 HTML, CSS,<br>
+							 자바스크립트를 이용해 쓰기 편하게 제공합니다.</p>
+							<br>
+							<button type="button" class="btn btn-outline-dark">
+								<a href="https://getbootstrap.kr/" target="_parent" id="anc">
+									바로가기
+								</a>
+							</button>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		document.querySelectorAll('.btn').forEach(buttonElement => {
+			const button = bootstrap.Button.getOrCreateInstance(buttonElement)
+			button.toggle()
+		});
+
+
+		const bsButton = new bootstrap.Button('#myButton')
+
+	</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2><strong>함수(function)란?</h2></strong><br/>
+함수(function)란 하나의 특별한 목적의 작업을 수행하도록 설계된 독립적인 블록을 의미합니다.</p>
+<h2><strong>함수 선언</h2></strong><br/>
+함수를 선언할 때는 function 키워드를 사용합니다.<br/>
+function greet(name) {<br/>
+&nbsp; &nbsp; console.log("안녕하세요, " + name + "님!");<br/>
+}</p>
+<p>greet("John");<br/>
+위의 예제에서 greet는 함수의 이름이고, name은 매개변수(parameter)입니다. 함수를 호출할 때 greet("John")와 같이 인수(arguments)를 전달할 수 있습니다.</p>
+<h2><strong>함수 표현식</h2></strong><br/>
+함수 표현식은 변수에 함수를 할당하는 방식으로 함수를 생성합니다.<br/>
+let multiply = function (a, b) {<br/>
+&nbsp; &nbsp; return a * b;<br/>
+};<br/>
+let result = multiply(3, 4);<br/>
+console.log(result); // 12</p>
+<h2><strong>화살표 함수 (Arrow Function)</h2></strong><br/>
+화살표 함수는 ES6에서 도입된 새로운 함수 선언 방식입니다.<br/>
+let add = (x, y) =&gt; x + y;<br/>
+console.log(add(2, 3)); // 5<br/>
+화살표 함수는 간결하게 함수를 표현할 수 있으며, 주로 콜백 함수나 간단한 함수를 정의할 때 사용됩니다.</p>
+<h2><strong>함수의 반환값</h2></strong><br/>
+함수는 값을 반환할 수 있습니다. return 키워드를 사용하여 함수 내에서 값을 반환하고, 호출한 곳에서 그 값을 사용할 수 있습니다.<br/>
+function add(a, b) {<br/>
+&nbsp; &nbsp; return a + b;<br/>
+}<br/>
+let sum = add(3, 4);<br/>
+console.log(sum); // 7</p>
+<h2><strong>함수 스코프</h2></strong><br/>
+자바스크립트에서는 함수 스코프가 적용되어 함수 내에서 선언된 변수는 해당 함수 내에서만 유효합니다.<br/>
+function example() {<br/>
+ let localVar = "함수 내에서만 유효한 변수";<br/>
+&nbsp; &nbsp; console.log(localVar);<br/>
+}<br/>
+example();<br/>
+console.log(localVar); // 오류: localVar는 정의되지 않음<br/>
+함수는 코드의 모듈화와 재사용성을 높이는 데에 중요한 역할을 합니다.</p>
+<h2><strong>매개변수와 인수</h2></strong><br/>
+매개변수는 함수에 전달되는 값을 받는 변수를 의미하며, 인수는 함수를 호출할 때 전달되는 값입니다.</p>
+<p>function greet(name) {<br/>
+&nbsp; &nbsp; console.log("안녕하세요, " + name + "님!");<br/>
+}</p>
+<p>greet("Jane");<br/>
+위의 예제에서 name은 매개변수이고, "Jane"은 인수입니다.</p>
+<h2><strong>기본 매개변수(Default Parameters)</h2></strong><br/>
+ES6에서는 함수에 기본 매개변수를 설정할 수 있습니다.</p>
+<p>function multiply(a, b = 1) {<br/>
+&nbsp; &nbsp; return a * b;<br/>
+}</p>
+<p>console.log(multiply(5)); // 5<br/>
+console.log(multiply(5, 3)); // 15<br/>
+b에 기본값으로 1이 설정되어 있으므로, multiply(5)와 같이 하나의 인수만 전달해도 기본값이 사용됩니다.</p>
+<h2><strong>Rest 매개변수</h2></strong><br/>
+Rest 매개변수는 함수에 여러 개의 인수를 배열로 받을 수 있게 합니다.<br/>
+function sum(...numbers) {<br/>
+&nbsp; &nbsp; return numbers.reduce((total, num) =&gt; total + num, 0);<br/>
+}<br/>
+console.log(sum(1, 2, 3, 4, 5)); // 15</p>
+<h2><strong>즉시 실행 함수(IIFE, Immediately Invoked Function Expression)</h2></strong><br/>
+즉시 실행 함수는 선언과 동시에 즉시 실행되는 함수입니다.<br/>
+(function() {<br/>
+ console.log("즉시 실행 함수");<br/>
+})();</p>
+<h2><strong>클로저 (Closure)</h2></strong><br/>
+클로저는 함수와 함수가 선언된 어휘적 환경(Lexical Environment)의 조합입니다. 함수 내부에서 외부 변수를 참조할 수 있게 합니다.<br/>
+function outer() {<br/>
+&nbsp; &nbsp; &nbsp;let outerVar = "외부 변수";<br/>
+&nbsp; &nbsp; &nbsp;function inner() {<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.log(outerVar);<br/>
+&nbsp; &nbsp; &nbsp;}<br/>
+&nbsp; &nbsp; return inner;<br/>
+}<br/>
+let closureFunc = outer();<br/>
+closureFunc(); // "외부 변수"</p>
+<h2><strong>함수 호이스팅 (Function Hoisting)</h2></strong><br/>
+자바스크립트에서 함수 선언문은 코드의 최상단으로 끌어올려지는 현상을 호이스팅이라고 합니다.<br/>
+sayHello(); // "안녕하세요!"<br/>
+function sayHello() {<br/>
+&nbsp; &nbsp; &nbsp;console.log("안녕하세요!");<br/>
+}</p>
+<p>이렇게 함수 선언문은 선언되기 전에 호출할 수 있습니다.<br/>
+함수는 프로그래밍에서 중요한 개념이며, 이를 통해 코드를 모듈화하고 재사용성을 높일 수 있습니다.</p>
+</body>
+</html>

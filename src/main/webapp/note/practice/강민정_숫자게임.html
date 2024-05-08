@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #output {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    #guessInput {
+      width: 50px;
+      text-align: center;
+    }
+    #submitGuess {
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Number Guessing Game</h1>
+  <p>1부터 10까지의 숫자를 맞춰보세요!</p>
+
+  <div id="output">숫자를 입력하세요.</div>
+  <input type="text" id="guessInput" placeholder="숫자 입력">
+  <button id="submitGuess" class="btn btn-outline-dark">제출</button>
+
+  <script>
+    // 1개의 함수만 사용하는 예제
+    function playGame() {
+      
+      var randomNumber = Math.floor(Math.random() * 10) + 1;// 랜덤 숫자 생성 (1부터 10까지)
+      var outputElement = document.getElementById("output");// 결과 출력 엘리먼트
+      var guessInput = document.getElementById("guessInput"); // 입력값 엘리먼트
+      var submitGuess = document.getElementById("submitGuess");// 제출 버튼
+
+      submitGuess.addEventListener("click", function () {
+        
+        var userGuess = parseInt(guessInput.value);// 사용자 입력값 가져오기
+        if (!isNaN(userGuess)) { // 입력값이 숫자인지 확인
+          if (userGuess === randomNumber) {// 숫자를 맞추었는지 확인
+            outputElement.textContent = "축하합니다! 숫자를 맞췄습니다!";
+          } else {
+            outputElement.textContent = "틀렸습니다. 다시 시도하세요.";
+          }
+        } else {
+          outputElement.textContent = "올바른 숫자를 입력하세요.";
+        }
+      });
+    }
+    // 게임 실행
+    playGame();
+  </script>
+</body>
+</html>
